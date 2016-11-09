@@ -1,0 +1,304 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"> </script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>ISession Interface</title><meta name="Language" content="en-us" /><meta name="System.Keywords" content="ISession interface" /><meta name="System.Keywords" content="SolaceSystems.Solclient.Messaging.ISession interface" /><meta name="System.Keywords" content="ISession interface, about ISession interface" /><meta name="Microsoft.Help.F1" content="SolaceSystems.Solclient.Messaging.ISession" /><meta name="Microsoft.Help.Id" content="T:SolaceSystems.Solclient.Messaging.ISession" /><meta name="Description" content="Represents a messaging API session. When a context is established, one or more sessions can be created within that context." /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="BrandingAware" content="true" /><meta name="container" content="SolaceSystems.Solclient.Messaging" /><meta name="file" content="d0313c0c-596e-ddb3-0467-7ae2039bfb86" /><meta name="guid" content="d0313c0c-596e-ddb3-0467-7ae2039bfb86" /><link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" /><script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"></script><script type="text/javascript" src="../scripts/branding-Website.js"></script></head><body onload="OnLoad('cs')"><input type="hidden" id="userDataCache" class="userDataStyle" /><div class="pageHeader" id="PageHeader">Solclient<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div><div class="pageBody"><div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="7f10bcf6-19f4-beff-0768-ced843e35168.htm" title="Solclient" tocid="roottoc">Solclient</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="7f10bcf6-19f4-beff-0768-ced843e35168.htm" title="SolaceSystems.Solclient.Messaging" tocid="7f10bcf6-19f4-beff-0768-ced843e35168">SolaceSystems.Solclient.Messaging</a></div><div class="toclevel1 current" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="d0313c0c-596e-ddb3-0467-7ae2039bfb86.htm" title="ISession Interface" tocid="d0313c0c-596e-ddb3-0467-7ae2039bfb86">ISession Interface</a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="c05429eb-7507-1fcc-d38b-e33a957c0f0e.htm" title="ISession Methods" tocid="c05429eb-7507-1fcc-d38b-e33a957c0f0e">ISession Methods</a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="9bb900e7-1a98-6af8-f9d6-584292970172.htm" title="ISession Properties" tocid="9bb900e7-1a98-6af8-f9d6-584292970172">ISession Properties</a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize" /><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize" /></div></div><div class="topicContent" id="TopicContent"><table class="titleTable"><tr><td class="titleColumn">ISession Interface</td></tr></table><span class="introStyle">version: 7.2.1.27</span><div class="summary">
+            Represents a messaging API session.
+            When a context is established, one or more sessions can be created within that context.
+            A session (modeled as an interface called ISession) creates a client connection
+            to the Solace appliance for sending and receiving messages. It also provides the
+            following:
+            Connect and disconnect on demand.Factory of <a href="391b4a92-ec54-992a-d79e-d907cf57f71e.htm">IFlow</a> instances.Factory of temporary destinations (see <a href="053f1e8d-6389-6b36-5dd9-ad69d033f322.htm">IDestination</a>) .Factory of non-durable endpoints (see <a href="04fc9146-6065-f20a-e474-b5883376bf9c.htm">IDurableTopicEndpoint</a> and <a href="1ea62d5f-c0d5-9efe-dca2-e55d61e72b85.htm">IQueue</a>) .Factory of cache session instances (see <a href="6cee9867-126b-3a9a-4f32-4ce5c6351db3.htm">ICacheSession</a>) .Ability to make request/replies.Subscribe and unsubscribe.Ability to update and retrieve session properties. Ability to retrieve session statistics (see <a href="d43a596a-bdb7-21df-2e74-82191716cb7a.htm">IStatsAccessible</a>).<p>
+            Disposing a session <b>must not</b> be performed in a session callback delegate
+            for the session being disposed. This includes all flows on the session.
+            </p></div><p> </p><strong>Namespace:</strong> <a href="7f10bcf6-19f4-beff-0768-ced843e35168.htm">SolaceSystems.Solclient.Messaging</a><br /><strong>Assembly:</strong> SolaceSystems.Solclient.Messaging (in SolaceSystems.Solclient.Messaging.dll) Version: 7.2.1.27 (7.2.1.27)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="ID1RBSection" class="collapsibleSection"><div class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="ID0ECCA_tab1" class="codeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID0ECCA','cs','1','3');return false;">C#</a></div><div id="ID0ECCA_tab2" class="codeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID0ECCA','vb','2','3');return false;">VB</a></div><div id="ID0ECCA_tab3" class="codeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID0ECCA','cpp','3','3');return false;">C++</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0ECCA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0ECCA');return false;" title="Copy">Copy</a></div></div><div id="ID0ECCA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="identifier">ISession</span> : <span class="identifier">IDisposable</span>, 
+	<span class="identifier">IStatsAccessible</span>, <span class="identifier">IMessageDispatcher</span></pre></div><div id="ID0ECCA_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Interface</span> <span class="identifier">ISession</span>
+	<span class="keyword">Inherits</span> <span class="identifier">IDisposable</span>, <span class="identifier">IStatsAccessible</span>, <span class="identifier">IMessageDispatcher</span></pre></div><div id="ID0ECCA_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">interface class</span> <span class="identifier">ISession</span> : <span class="identifier">IDisposable</span>, 
+	<span class="identifier">IStatsAccessible</span>, <span class="identifier">IMessageDispatcher</span></pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0ECCA");</script></div><p>The <span class="selflink">ISession</span> type exposes the following members.</p><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="ID2RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="659436ce-4533-7ba5-c140-db6373e4b64a.htm">ClearStats</a></td><td><div class="summary">
+            Clears the stats dictionary.
+            </div> (Inherited from <a href="d43a596a-bdb7-21df-2e74-82191716cb7a.htm">IStatsAccessible</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="358e15a6-e980-5d2f-497d-ffebca2514c5.htm">Connect</a></td><td><div class="summary">
+            Connects the specified session. A session connection can be carried out in a blocking or
+            non-blocking mode, depending upon the session property ConnectBlocking.
+            <p>
+            In blocking mode, the calling thread is blocked until either the session connection
+            attempt succeeds or is determined to have failed. If the connection succeeds, SOLCLIENT_OK
+            is returned. If the session could not connect, <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_NOT_READY</a> is returned. 
+            </p><p>
+            In non-blocking mode, <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_IN_PROGRESS</a> is returned upon 
+            a successful session connect request, and the connection attempt proceeds in the background. 
+            In both non-blocking and blocking mode, a session event is generated for the session:
+            <a href="20084581-3120-23a3-bc9a-2e57404e2c40.htm">UpNotice</a>, if the session successfully connects; or
+            <a href="20084581-3120-23a3-bc9a-2e57404e2c40.htm">ConnectFailedError</a>, if the session fails to connect.
+            </p><p>
+            For blocking mode, the session event is issued before the call to <a href="358e15a6-e980-5d2f-497d-ffebca2514c5.htm">Connect<span id="LSTFE8C52F6_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_0?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>
+            returns. For non-blocking mode, the timing is undefined (that is, it could occur before
+            or after the call returns, but it is typically after). A session connection timer, controlled
+            by the session property <a href="d3f2cb47-bd37-7009-9bb0-7c54b90319e4.htm">ConnectTimeoutInMsecs</a>, controls the maximum amount of time a session
+            connect attempt lasts for. If this amount time is exceeded, a
+            <a href="20084581-3120-23a3-bc9a-2e57404e2c40.htm">ConnectFailedError</a> event is issued for the session. 
+            </p><p>
+            If there is an error when <a href="358e15a6-e980-5d2f-497d-ffebca2514c5.htm">Connect<span id="LSTFE8C52F6_1"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_1?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> is invoked, <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_FAIL</a> is returned, 
+            and a session event is not subsequently issued. Therefore, the caller must check for a return code of
+            <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_FAIL</a> if it has logic that depends upon a subsequent session event to be issued.
+            For a non-blocking session connect invocation, if the session connect attempt eventually
+            fails, the last error information to indicate the reason for the failure cannot be determined
+            by the calling thread, rather it must be discovered through the session event delegate (and
+            <a href="ecc3c56b-3991-02fa-ae80-6b61b1010ffa.htm">GetLastSDKErrorInfo<span id="LSTFE8C52F6_2"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_2?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> can be called in the session event delegate to get further information).
+            For a blocking session connect invocation, if the session connect attempt does not return
+            <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_OK</a>, then the calling thread can determine the failure reason by immediately calling
+            <a href="ecc3c56b-3991-02fa-ae80-6b61b1010ffa.htm">GetLastSDKErrorInfo<span id="LSTFE8C52F6_3"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_3?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="3ce573b8-4fa8-89ed-7493-e60259e87f4c.htm">CreateBrowser</a></td><td><div class="summary">
+            Creates a new <a href="0257a4b0-84f8-d643-90e3-1a093b7ccef9.htm">IBrowser</a> instance.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="5c4dca70-7a1a-439f-6521-a74894f91426.htm">CreateCacheSession</a></td><td><div class="summary">
+            This method creates a cache session instance to be used in subsequent cache request operations on the 
+            session. Multiple ICacheSesssion instances may be created on an ISession instance. 
+            </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="ad55be84-ede6-e09e-9a3e-9965d5df0e2e.htm">CreateDispatchTarget</a></td><td><div class="summary">
+            Creates a <a href="51b8dfd8-d896-87de-6131-1b9e5895ff90.htm">IDispatchTarget</a> instance to be used in the <a href="a4c29528-d9a2-42e9-a7cc-68dea11dfea2.htm">Subscribe(IDispatchTarget, Int32, Object)</a>
+            and <a href="382a52d6-770b-0566-cd5d-2e3c7937894b.htm">Unsubscribe(IDispatchTarget, Int32, Object)</a> methods.
+            <p><strong>
+            Note: </strong>Client applications must keep IDispatchTarget object references accessible if they want to Unsubscribe from 
+            the given IMessageDispatcher, and remove already added Topic subscriptions.
+            IDispatchTarget internal object ID constitutes a unique key. Forgetting to keep a reference to IDispatchTarget objects make subsequent <a href="382a52d6-770b-0566-cd5d-2e3c7937894b.htm">Unsubscribe(IDispatchTarget, Int32, Object)</a> calls impossible.
+            
+            </p></div> (Inherited from <a href="9e4e366e-e346-9600-caf7-9cfaeebf841e.htm">IMessageDispatcher</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="a548a98a-9134-c167-2517-192a26ceed77.htm">CreateFlow(FlowProperties, IEndpoint, ISubscription, EventHandler<span id="LSTFE8C52F6_4"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_4?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>MessageEventArgs<span id="LSTFE8C52F6_5"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_5?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>, EventHandler<span id="LSTFE8C52F6_6"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_6?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>FlowEventArgs<span id="LSTFE8C52F6_7"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_7?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>)</a></td><td><div class="summary">
+            Creates <a href="391b4a92-ec54-992a-d79e-d907cf57f71e.htm">IFlow</a> instances. 
+            A flow is an API concept, which allows client applications to consume messages off an <a href="b52514bd-f50c-701b-fe28-f5fff94c1f6f.htm">IEndpoint</a> attracted
+            by a <a href="9a022dd5-cd41-1b90-0534-80a6aa846c7e.htm">ISubscription</a> to a <a href="053f1e8d-6389-6b36-5dd9-ad69d033f322.htm">IDestination</a>. 
+            <p>
+            The message receive delegate is
+            invoked for each received message on this flow. The flow event delegate is
+            invoked when flow events occur, such as the flow going up or down. Both
+            delegates are invoked in the context of the context thread to which this session belongs.
+            </p><p><strong>Note:</strong> disposing the corresponding context (<a href="3a13818a-ef45-d3ac-6e03-183f97b8822c.htm">IContext</a>) 
+            or any of its contained context timers (<a href="be6c9b7f-1c57-c007-0f3b-c259c8c8a01d.htm">TimerTask</a>), sessions (<span class="selflink">ISession</span>) 
+            or flows (<a href="391b4a92-ec54-992a-d79e-d907cf57f71e.htm">IFlow</a>) 
+            <b>must not</b> be performed from within the registered delegates (messageEventHandler or flowEventHandler).
+            </p><p>
+            An endpoint is a holding area which allows a client to attract Guaranteed messages matching  
+            a given subscription to a destination. There are two types of endpoints: "durable" and "non-durable". Durable 
+            in this context means that the client that is bound to the given endpoint does not have to be online to
+            attract messages. Non-durable endpoints are disposed when the bound client disconnects. 
+            </p><p>
+            A destination can be either temporary or non-temporary. A temporary destination is used as a "reply to" field in
+            request/reply message exchange patterns. Wildcard subscription capabilities do not apply to temporary destinations.
+            </p><p>
+            With the exception of durable endpoint with temporary destination, the following cases are supported:
+            </p><table border="1"><tr><th>use case</th><th>endPoint</th><th colspan="4">subscription</th></tr><tr><td>A flow bound to a non-temporary <a href="1ea62d5f-c0d5-9efe-dca2-e55d61e72b85.htm">IQueue</a>.</td><td>A non-null <a href="1ea62d5f-c0d5-9efe-dca2-e55d61e72b85.htm">IQueue</a>, created by <a href="e01316d2-6464-ac91-2601-90330645176c.htm">CreateQueue(String)</a></td><td>null</td></tr><tr><td>A flow bound to a temporary <a href="1ea62d5f-c0d5-9efe-dca2-e55d61e72b85.htm">IQueue</a>.</td><td>A non-null <a href="1ea62d5f-c0d5-9efe-dca2-e55d61e72b85.htm">IQueue</a>, created by <a href="56fc639d-2c00-90c5-d823-59ec6a5d0ef9.htm">CreateTemporaryQueue<span id="LSTFE8C52F6_8"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_8?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>.</td><td>null</td></tr><tr><td>A flow bound to a non-temporary <a href="87c5bbe8-0609-daa9-5190-1531ff05eeb3.htm">ITopic</a> and a durable <a href="c290190a-2b77-6ce8-9bcb-e164f0cff7ca.htm">ITopicEndpoint</a>.</td><td>A non-null <a href="c290190a-2b77-6ce8-9bcb-e164f0cff7ca.htm">ITopicEndpoint</a>, created by <a href="958e5d3e-80f7-cd04-3876-4235072c3394.htm">CreateDurableTopicEndpoint(String)</a>.</td><td>A non-null <a href="87c5bbe8-0609-daa9-5190-1531ff05eeb3.htm">ITopic</a>, created by <a href="a24b7ecc-8851-82eb-432a-172479bd8aeb.htm">CreateTopic(String)</a> or <a href="d7cbf990-2942-bd4f-2116-3e5f065ee42c.htm">CreateTopic(TopicProperties)</a>.</td></tr><tr><td>A flow bound to a non-temporary <a href="87c5bbe8-0609-daa9-5190-1531ff05eeb3.htm">ITopic</a> and a non-durable <a href="c290190a-2b77-6ce8-9bcb-e164f0cff7ca.htm">ITopicEndpoint</a>.</td><td>A Non-Durable <a href="c290190a-2b77-6ce8-9bcb-e164f0cff7ca.htm">ITopicEndpoint</a>, created by <a href="3bb5b51e-91ee-887f-9ee9-a3a25bc130bc.htm">CreateNonDurableTopicEndpoint<span id="LSTFE8C52F6_9"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_9?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>. </td><td>A non-null <a href="87c5bbe8-0609-daa9-5190-1531ff05eeb3.htm">ITopic</a>, created by <a href="a24b7ecc-8851-82eb-432a-172479bd8aeb.htm">CreateTopic(String)</a> or <a href="d7cbf990-2942-bd4f-2116-3e5f065ee42c.htm">CreateTopic(TopicProperties)</a>.</td></tr><tr><td>A flow bound to a temporary <a href="87c5bbe8-0609-daa9-5190-1531ff05eeb3.htm">ITopic</a> and a non-durable <a href="c290190a-2b77-6ce8-9bcb-e164f0cff7ca.htm">ITopicEndpoint</a>.</td><td>A Non-Durable <a href="c290190a-2b77-6ce8-9bcb-e164f0cff7ca.htm">ITopicEndpoint</a>, created by <a href="3bb5b51e-91ee-887f-9ee9-a3a25bc130bc.htm">CreateNonDurableTopicEndpoint<span id="LSTFE8C52F6_10"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_10?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>. </td><td>A non-null <a href="87c5bbe8-0609-daa9-5190-1531ff05eeb3.htm">ITopic</a>, created by <a href="194e987d-b097-8094-7921-6da9cab1601f.htm">CreateTemporaryTopic<span id="LSTFE8C52F6_11"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_11?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> or <a href="d7cbf990-2942-bd4f-2116-3e5f065ee42c.htm">CreateTopic(TopicProperties)</a>.</td></tr><tr><td>A flow bound to a subscriber endpoint <a href="ab471e42-d0e0-f8ab-1268-bc2fc81e4fcb.htm">ISubscriberEndpoint</a>. (Supported only when connecting with CRB-equipped appliances.)</td><td>A non <a href="ab471e42-d0e0-f8ab-1268-bc2fc81e4fcb.htm">ISubscriberEndpoint</a>, created by <a href="cf56b610-5dc0-8869-5dc5-e2ee9938b6e4.htm">CreateSubscriberEndpoint(ISession)</a>.</td><td>null</td></tr></table></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="fcbd768d-05e6-4992-b06c-453f6ef791d6.htm">CreateFlow(FlowProperties, IEndpoint, ISubscription, EventHandler<span id="LSTFE8C52F6_12"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_12?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>MessageEventArgs<span id="LSTFE8C52F6_13"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_13?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>, EventHandler<span id="LSTFE8C52F6_14"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_14?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>FlowEventArgs<span id="LSTFE8C52F6_15"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_15?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>, EndpointProperties)</a></td><td><div class="summary">
+            Creates <a href="391b4a92-ec54-992a-d79e-d907cf57f71e.htm">IFlow</a> instances. 
+            In addition, if endPoint is a non-durable Endpoint, it is possible to specify the <a href="9acd72d8-0bf2-e760-06a4-2a2cf5033aa8.htm">EndpointProperties</a> of implicitly created Endpoint on
+            the appliance.
+            <p>
+            The message receive delegate is
+            invoked for each received message on this flow. The flow event delegate is
+            invoked when flow events occur, such as the flow going up or down. Both
+            delegates are invoked in the context of the context thread to which this session belongs.
+            </p><p><strong>Note:</strong> disposing the corresponding context (<a href="3a13818a-ef45-d3ac-6e03-183f97b8822c.htm">IContext</a>) 
+            or any of its contained context timers (<a href="be6c9b7f-1c57-c007-0f3b-c259c8c8a01d.htm">TimerTask</a>), sessions (<span class="selflink">ISession</span>) 
+            or flows (<a href="391b4a92-ec54-992a-d79e-d907cf57f71e.htm">IFlow</a>) 
+            <b>must not</b> be performed from within the registered delegates (messageEventHandler or flowEventHandler).
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="2f3eb390-04c6-b688-90c2-0d04f8a6003f.htm">CreateMessage</a></td><td><div class="summary">
+            Creates an IMessage instance. Applications are responsible for disposing all messages allocated by this method
+            as soon as they are done with them.
+            <p>
+            This method is simply provided for convenience's sake. There is no lifecycle dependency between <span class="selflink">ISession</span> and <a href="75f2bae5-bd7e-322c-0cc5-4d16112790fe.htm">IMessage</a>.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="3bb5b51e-91ee-887f-9ee9-a3a25bc130bc.htm">CreateNonDurableTopicEndpoint<span id="LSTFE8C52F6_16"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_16?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a></td><td><div class="summary">
+            Creates a non-durable Topic Endpoint. The non-durable Topic Endpoint must be bound to
+            by a <a href="391b4a92-ec54-992a-d79e-d907cf57f71e.htm">IFlow</a> on this session.
+            <p>The non-durable endpoint is created on the appliance when a consumer is bound on this
+            session.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="c90ef01f-988f-63ee-550f-13490ef1273c.htm">CreateNonDurableTopicEndpoint(String)</a></td><td><div class="summary">
+            Creates a non-durable Topic Endpoint based on the given name. The non-durable Topic
+            Endpoint must be bound to by a <a href="391b4a92-ec54-992a-d79e-d907cf57f71e.htm">IFlow</a> on this session.
+            <p>The non-durable endpoint is created on the appliance when a consumer is bound on this
+            session.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="56fc639d-2c00-90c5-d823-59ec6a5d0ef9.htm">CreateTemporaryQueue<span id="LSTFE8C52F6_17"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_17?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a></td><td><div class="summary">
+            Creates a temporary Queue for this session. This queue should only be 
+            bound to by a consumer on this session; although other sessions can publish
+            to it.
+            <p>
+            A temporary Queue can only be used to bind to non-durable endpoints. The
+            non-durable endpoint is created on the appliance when a consumer is bound on this session.
+            </p><p><a href="358e15a6-e980-5d2f-497d-ffebca2514c5.htm">Connect<span id="LSTFE8C52F6_18"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_18?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> must be called before calling this method.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="7d0cd454-eb22-cf26-dac3-3e5beeca8431.htm">CreateTemporaryQueue(String)</a></td><td><div class="summary">
+            Creates a temporary Queue on this session with the given name. This Queue should only be 
+            bound to by a consumer on this session; although other sessions can publish
+            to it.
+            <p>
+            A temporary queue can only be used to bind to non-durable endpoints. The
+            non-durable endpoint is created on the appliance when a consumer is bound on this session.
+            </p><p><a href="358e15a6-e980-5d2f-497d-ffebca2514c5.htm">Connect<span id="LSTFE8C52F6_19"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_19?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> must be called before calling this method.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="194e987d-b097-8094-7921-6da9cab1601f.htm">CreateTemporaryTopic</a></td><td><div class="summary">
+            Creates a temporary topic for this session. Only a consumer on this 
+            session should bind to this topic; although clients on other sessions
+            can publish to it.
+            <p>
+            Temporary topics can only be used to bind to non-durable endpoints.
+            </p><p><a href="358e15a6-e980-5d2f-497d-ffebca2514c5.htm">Connect<span id="LSTFE8C52F6_20"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_20?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> must be called before calling this method.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="eb740db0-0637-602f-5132-ba7b90f04030.htm">CreateTransactedSession</a></td><td><div class="summary">
+            Creates a transacted session on the given ISession instance.
+            
+            If <a href="11e015b9-ea98-b086-15df-9f039d9681ac.htm">CreateMessageDispatcher</a> is
+            false, the default Context-bound Message Dispatcher is used by the
+            transacted session to deliver messages asynchronously to transacted flows.
+            
+            By enabling <a href="11e015b9-ea98-b086-15df-9f039d9681ac.htm">CreateMessageDispatcher</a>,
+            a new transacted-session-bound messge dispatcher is created when the
+            transacted session creates its first transacted consumer flow with asynchrounous
+            message delivery.
+            
+            <a href="eb740db0-0637-602f-5132-ba7b90f04030.htm">CreateTransactedSession(TransactedSessionProperties)</a> blocks until a transacted
+            session is created on the appliance. If <a href="81935a21-2892-4658-3be0-8984c7b97461.htm">HasPublisher</a>
+            is enabled, it also waits until a default publisher flow is opened properly.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="2d331532-df99-488b-4daa-a483400749b4.htm">Deprovision</a></td><td><div class="summary">
+            Deprovisions or removes a durable <a href="c290190a-2b77-6ce8-9bcb-e164f0cff7ca.htm">ITopicEndpoint</a> or <a href="1ea62d5f-c0d5-9efe-dca2-e55d61e72b85.htm">IQueue</a> from the appliance.
+            Endpoint deprovisioning can be carried out in a synchronous or asynchronous mode, depending upon the provision flags 
+            passed in to this method. 
+            
+            If <a href="452a45a6-a6b2-299c-125a-55526b36ed2c.htm">WaitForConfirm</a> is specified in flags,
+            the calling thread is blocked until the endpoint deprovisioning attempt either
+            succeeds or is determined to have failed. 
+            
+            If <a href="452a45a6-a6b2-299c-125a-55526b36ed2c.htm">WaitForConfirm</a> is not set, <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_IN_PROGRESS</a> 
+            is returned when the endpoint deprovision request is successfully sent, and the remove attempt proceeds in the background.
+            <p>
+            An Endpoint provision timer, controlled by the property
+            <a href="f5d82277-809c-8ca1-13ef-7ac608733a2c.htm">ProvisionTimeoutInMsecs</a>, controls the maximum amount of
+            time a deprovsion attempt lasts for. Upon expiry of this timer,
+            a <a href="20084581-3120-23a3-bc9a-2e57404e2c40.htm">ProvisionError</a> event is returned in the session event delegate.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="d42b514d-cabd-4524-07f3-4522a299ecf9.htm">Disconnect</a></td><td><div class="summary">
+            Disconnects the session.
+            </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/es4s3w1d" target="_self">Dispose</a></td><td><div class="summary">
+                    Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/aax125c9" target="_self">IDisposable</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="3868d580-ce81-a000-27df-4f0bd121ca35.htm">GetCapability</a></td><td><div class="summary">
+            Returns an <a href="a55e544f-e572-b1e8-15f7-8c70d054b09d.htm">ICapability</a> instance for the given <a href="6fed651b-65a9-58ad-2822-89d3e26536a0.htm">CapabilityType</a>.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="3d3e2e98-8639-2d9f-fe88-56ef93a9ea49.htm">GetContext</a></td><td><div class="summary">
+            Returns a reference to the Context that was used to create this session.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="e9f9dde5-31a5-d4c9-8915-aabfb4e660e1.htm">GetProperty</a></td><td><div class="summary">
+            Returns the object value of a given property.
+            </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="217facea-8cdf-775d-e0fb-9924e8db3c61.htm">GetRxStats</a></td><td><div class="summary">
+            Returns the Rx Stats.
+            </div> (Inherited from <a href="d43a596a-bdb7-21df-2e74-82191716cb7a.htm">IStatsAccessible</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="6a242a85-6d11-7709-d158-337d85207234.htm">GetTxStats</a></td><td><div class="summary">
+            Returns the Tx Stats.
+            </div> (Inherited from <a href="d43a596a-bdb7-21df-2e74-82191716cb7a.htm">IStatsAccessible</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="a39372ed-466f-36b0-3c4b-4ab7694ffffb.htm">IsCapable</a></td><td><div class="summary">
+            Checks if the specified capability type is set on the currently connected session.
+            Returns true if the session has the specified <a href="6fed651b-65a9-58ad-2822-89d3e26536a0.htm">CapabilityType</a>.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="3f2aebee-6509-b9f6-c55d-78829048e32f.htm">ModifyClientInfo</a></td><td><div class="summary">
+            Allows the following client name and description properties of a Session to be modified after the Session has been created.
+            <ul><li><a href="40f114ae-bcee-662c-9e10-cf5ac6750c95.htm">ClientDescription</a></li><li><a href="f2ff05d9-93f8-1a3a-102b-b8e8df3db486.htm">ClientName</a></li></ul><p>
+            The property modifications can be  carried out in a blocking or non-blocking mode, depending on the flag <a href="ea309599-ae64-f15e-2045-42e94797d0ab.htm">ModifyPropertyFlag</a>
+            Attempting to specify other Session properties will result in <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_FAIL</a> being returned. 
+            </p><p>
+            Note that only one outstanding client info modification request is allowed.
+            Note that changing client name property would trigger the P2P topic changes. To avoid message loss, it is recommended that this API 
+            is used only at the initialization time. 
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="063943ff-188f-778f-ad64-4ad3c5841233.htm">ModifyProperty</a></td><td><div class="summary">
+            Allows certain properties of a session to be modified after the session has been created.
+            Currently, only the following session properties can be modified:
+            <br><a href="155600a4-7430-1870-b49e-59b5984eea0d.htm">ClientDescription</a> (Deprecated - See Note below)
+            </br><br><a href="155600a4-7430-1870-b49e-59b5984eea0d.htm">ClientName</a> (Deprecated - See Note below)
+            </br><br><a href="3d8e6034-0f60-467b-340b-aa63a4555f3a.htm">Host</a> (may only be modified when session is disconnected)
+            </br><br><a href="2756887b-33bb-fe03-bde8-991ca32901f1.htm">Port</a> (may only be modified when session is disconnected)
+            </br><br /><strong>Note:</strong> Applications shall use <a href="3f2aebee-6509-b9f6-c55d-78829048e32f.htm">ModifyClientInfo(SessionProperties<span id="LSTFE8C52F6_21"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_21?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>PROPERTY, Object, Int32, Object)</a> to modify the following session
+            properties:
+            <br><a href="155600a4-7430-1870-b49e-59b5984eea0d.htm">ClientDescription</a></br><br><a href="155600a4-7430-1870-b49e-59b5984eea0d.htm">ClientName</a></br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="a5d2456f-d18e-e0b0-e573-0a25072eacad.htm">Provision</a></td><td><div class="summary">
+            Provisions a durable <a href="c290190a-2b77-6ce8-9bcb-e164f0cff7ca.htm">ITopicEndpoint</a> or <a href="1ea62d5f-c0d5-9efe-dca2-e55d61e72b85.htm">IQueue</a> on the appliance.
+            Endpoint creation can be carried out in a synchronous or asynchronous mode, depending upon the provision flags 
+            passed in to this method. 
+            
+            If <a href="452a45a6-a6b2-299c-125a-55526b36ed2c.htm">WaitForConfirm</a> is specified in flags,
+            the calling thread is blocked until the endpoint creation attempt either
+            succeeds or is determined to have failed. 
+            
+            If <a href="452a45a6-a6b2-299c-125a-55526b36ed2c.htm">WaitForConfirm</a> is not specified in flags, <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_IN_PROGRESS</a> 
+            is returned when the endpoint provision request is successfully sent, and the creation attempt proceeds in the background.
+            <p>
+            An Endpoint provision timer, controlled by the property
+            <a href="f5d82277-809c-8ca1-13ef-7ac608733a2c.htm">ProvisionTimeoutInMsecs</a>, controls the maximum amount of
+            time a provision attempt lasts for. Upon expiry of this timer, a <a href="20084581-3120-23a3-bc9a-2e57404e2c40.htm">ProvisionError</a> 
+            event is returned in the session event delegate.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="e30d50c1-b50c-afac-4dbc-9d4ff5e7e031.htm">Send(IMessage)</a></td><td><div class="summary">
+            Sends a message over the session.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="e74dd216-3fcc-b984-4717-261664c47f72.htm">Send(<span id="LSTFE8C52F6_22"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_22?cpp=array&lt;");</script>IMessage<span id="LSTFE8C52F6_23"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_23?cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]");</script>, Int32, Int32, Int32<span id="LSTFE8C52F6_24"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_24?cpp=%");</script>)</a></td><td><div class="summary">
+            Sends an array of messages over the session, attempting to send them all at once.
+            <p>
+            Note that the number of messages which can be sent through a single call to this method is limited to <strong>50</strong>.
+            </p><p>
+            For sessions in which Send(IMessage[],...) is used, it is recommended that <a href="c1696908-cd92-c7ff-2c50-82f6e89b397b.htm">TcpNoDelay</a> 
+            be set to true (it is enabled by default).
+            In this case, multiple messages are sent at once onto a TCP connection, and therefore
+            there is no need to have the operating system carry out the TCP delay algorithm to cause fuller IP packets.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="b0aa1b85-0877-28eb-f33c-8d64d0f6fc2f.htm">SendReply</a></td><td><div class="summary">
+            Sends a Reply Message (see SetAsReplyMessage() on IMessage). 
+            If messageToReply is non-null, the following
+            message properties are copied to replyMessage:
+            ReplyTo is copied to Destination, unless ReplyTo is null.CorrelationId, unless it is null.
+            If messageToReplyTo is null, the application is responsible for setting the Destination and CorrelationId on the 
+            replyMessage. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="2efacf42-833b-761c-8414-cd3ff28777bd.htm">SendRequest</a></td><td><div class="summary">
+             Send a Topic Request message. The application expects an end-to-end reply from the client that
+             receives the request message. If the Reply-To destination in the UserProperties of the request message is
+             not set, it defaults to the current session's ReplyTo destination.
+             Leaving the replyTo destination unset and allowing the API to
+             set the default replyTo destination is the easiest way to set a valid replyTo destination.
+            
+             When the responses are handled asynchronously (that is, the timeout parameter is zero), the application
+             may set any replyTo destination. When the application needs to block and wait for the reply
+             (that is, the timeout parameter is non-zero), the replyTo destination must be a topic that the
+             application has subscribed to for Direct messages. 
+            
+             If timeoutInMsecs is zero, this method returns immediately upon successfully accepting the request message
+             for transmission. Any replies sent back by the destination client are delivered to the
+             ReplyTo Destination through the message receive delegate. In such a case, the reply tag is set (IsReplyMessage == true)
+             on the response message. It is entirely the responsibility of the application to manage 
+             asynchronous replies. Applications can use the CorrelationId message property on outgoing requests. 
+             
+             If the timeoutInMsecs parameter is non-zero, the function waits for the amount of time specified by timeoutInMsecs milliseconds before
+             returning with <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_INCOMPLETE</a>. If the replyTo destination
+             is set to an unsubscribed topic, or endpoint, a call to Session.SendRequest()
+             will block until the amount of time set for the timeout parameter expires and then return <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_INCOMPLETE</a>.
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="c2aab071-f41e-78f3-8823-849c70d61eb6.htm">SetClientDescription</a></td><td> <strong>Obsolete. </strong><div class="summary">
+            Sets the Client Description. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="803f4df9-de5a-d7ff-16c4-b3be08908259.htm">Subscribe(ISubscription, Boolean)</a></td><td><div class="summary">
+            Registers a subscription to the appliance. When the appliance is running SolOS-TR, a Topic is
+            required.
+            </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="a4c29528-d9a2-42e9-a7cc-68dea11dfea2.htm">Subscribe(IDispatchTarget, Int32, Object)</a></td><td><div class="summary">
+             Adds a <a href="51b8dfd8-d896-87de-6131-1b9e5895ff90.htm">IDispatchTarget</a> subscription to the given IMessageDispatcher. 
+             <p>
+             Note: In order to use this feature, the parent ISession's SessionProperties must have TopicDispatch set to true.
+             </p></div> (Inherited from <a href="9e4e366e-e346-9600-caf7-9cfaeebf841e.htm">IMessageDispatcher</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="95cb9c32-8e36-44fd-5f9f-facd8eb76502.htm">Subscribe(IEndpoint, ISubscription, Int32, Object)</a></td><td><div class="summary">
+            Add a <a href="87c5bbe8-0609-daa9-5190-1531ff05eeb3.htm">ITopic</a> subscription on the endpoint if the operation is supported on the
+            endpoint (Only endpoints of type <a href="1ea62d5f-c0d5-9efe-dca2-e55d61e72b85.htm">IQueue</a> or type <a href="6b52677d-fb7e-1426-1197-95c6dafca87d.htm">IClientName</a> support this operation).
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="b4056830-17e4-6368-b025-af8c6b777e9c.htm">Unsubscribe(ISubscription, Boolean)</a></td><td><div class="summary">
+            Remove a subscription.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="b8e01b18-884b-1c40-755f-2455ee627674.htm">Unsubscribe(ITopicEndpoint, Int32)</a></td><td> <strong>Obsolete. </strong><div class="summary">
+            Unsubscribes from a durable Topic Endpoint.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="04cad704-7908-ad73-79d8-a4aca8c1d760.htm">Unsubscribe(ITopicEndpoint, Object)</a></td><td><div class="summary">
+            Unsubscribes from a durable Topic Endpoint. This is only valid if no clients are bound to the 
+            topic endpoint.
+            </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="382a52d6-770b-0566-cd5d-2e3c7937894b.htm">Unsubscribe(IDispatchTarget, Int32, Object)</a></td><td><div class="summary">
+             Removes an IDispatchTarget subscription from the given IMessageDispatcher.
+             <p>
+             Note: To use this feature, the parent ISession's SessionProperties must have TopicDispatch set to true.
+             </p></div> (Inherited from <a href="9e4e366e-e346-9600-caf7-9cfaeebf841e.htm">IMessageDispatcher</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="23159300-2ebf-5c71-8ba9-0a7e8e274495.htm">Unsubscribe(IEndpoint, ISubscription, Int32, Object)</a></td><td><div class="summary">
+            Remove a <a href="87c5bbe8-0609-daa9-5190-1531ff05eeb3.htm">ITopic</a> subscription from the endpoint if the operation is supported on the
+            endpoint (Only endpoint of type <a href="1ea62d5f-c0d5-9efe-dca2-e55d61e72b85.htm">IQueue</a> supports this operation).
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="c920ff87-d024-3893-40ed-379067436df9.htm">ValidateTopic</a></td><td><div class="summary">
+            This method checks a topic string against topic encoding rules for the appliance. This
+            method is intended for use before sending a message to a topic.
+            This method should not be used with Subscribe methods. Subscribe methods
+            perform its own topic validation, which includes accepting wildcards. 
+            For performance reasons <a href="e30d50c1-b50c-afac-4dbc-9d4ff5e7e031.htm">Send(IMessage)</a> and <a href="e74dd216-3fcc-b984-4717-261664c47f72.htm">Send(<span id="LSTFE8C52F6_25"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_25?cpp=array&lt;");</script>IMessage<span id="LSTFE8C52F6_26"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_26?cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]");</script>, Int32, Int32, Int32<span id="LSTFE8C52F6_27"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTFE8C52F6_27?cpp=%");</script>)</a> does not validate topics, and this method
+            is provided as a convenience to the developer to ensure a topic is valid
+            before sending a message that could be rejected by the appliance. It is
+            expected then that the same topic will be used for sending many messages.
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID3RB')" onkeypress="SectionExpandCollapse_CheckKey('ID3RB', event)" tabindex="0"><img id="ID3RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Properties</span></div><div id="ID3RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="af2a8e80-690f-aaf1-67c5-fb171bec6e19.htm">Flows</a></td><td><div class="summary">
+            Represents the current read-only collection of active (not yet disposed) flows created by this session.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="689917f0-f9f7-f868-0f62-c5d3708de00e.htm">Properties</a></td><td><div class="summary">
+            Returns a copy of the current SessionProperties.
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID4RB')" onkeypress="SectionExpandCollapse_CheckKey('ID4RB', event)" tabindex="0"><img id="ID4RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID4RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="7f10bcf6-19f4-beff-0768-ced843e35168.htm">SolaceSystems.Solclient.Messaging Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter">Copyright 2004-2016 Solace Systems, Inc. All rights reserved.  <p /> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use and copy the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: <p /> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  <p /> UNLESS STATED ELSEWHERE BETWEEN YOU AND SOLACE SYSTEMS, INC., THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:support_request%40solacesystems.com?Subject=Solclient">support_request@solacesystems.com</a></div><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script> </div></body></html>

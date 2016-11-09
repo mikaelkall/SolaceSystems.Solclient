@@ -1,0 +1,528 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"> </script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>SessionProperties Class</title><meta name="Language" content="en-us" /><meta name="System.Keywords" content="SessionProperties class" /><meta name="System.Keywords" content="SolaceSystems.Solclient.Messaging.SessionProperties class" /><meta name="System.Keywords" content="SessionProperties class, about SessionProperties class" /><meta name="Microsoft.Help.F1" content="SolaceSystems.Solclient.Messaging.SessionProperties" /><meta name="Microsoft.Help.Id" content="T:SolaceSystems.Solclient.Messaging.SessionProperties" /><meta name="Description" content="Session initialization properties. Some Session Properties can also be set as environment variables." /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="BrandingAware" content="true" /><meta name="container" content="SolaceSystems.Solclient.Messaging" /><meta name="file" content="82816aab-350c-a890-cc35-ac125b35421c" /><meta name="guid" content="82816aab-350c-a890-cc35-ac125b35421c" /><link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" /><script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"></script><script type="text/javascript" src="../scripts/branding-Website.js"></script></head><body onload="OnLoad('cs')"><input type="hidden" id="userDataCache" class="userDataStyle" /><div class="pageHeader" id="PageHeader">Solclient<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div><div class="pageBody"><div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="7f10bcf6-19f4-beff-0768-ced843e35168.htm" title="Solclient" tocid="roottoc">Solclient</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="7f10bcf6-19f4-beff-0768-ced843e35168.htm" title="SolaceSystems.Solclient.Messaging" tocid="7f10bcf6-19f4-beff-0768-ced843e35168">SolaceSystems.Solclient.Messaging</a></div><div class="toclevel1 current" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="82816aab-350c-a890-cc35-ac125b35421c.htm" title="SessionProperties Class" tocid="82816aab-350c-a890-cc35-ac125b35421c">SessionProperties Class</a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="0e6576df-1ae0-07f7-5626-9c248e308aad.htm" title="SessionProperties Constructor " tocid="0e6576df-1ae0-07f7-5626-9c248e308aad">SessionProperties Constructor </a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="f7980606-19ad-80ec-89d8-43eeb2f0684c.htm" title="SessionProperties Methods" tocid="f7980606-19ad-80ec-89d8-43eeb2f0684c">SessionProperties Methods</a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="2b6cbba4-ff8c-0c93-113c-3386a0a9d8bb.htm" title="SessionProperties Properties" tocid="2b6cbba4-ff8c-0c93-113c-3386a0a9d8bb">SessionProperties Properties</a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize" /><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize" /></div></div><div class="topicContent" id="TopicContent"><table class="titleTable"><tr><td class="titleColumn">SessionProperties Class</td></tr></table><span class="introStyle">version: 7.2.1.27</span><div class="summary">
+            Session initialization properties.
+            <p>
+            Some Session Properties can also be set as environment variables.  If a session property 
+            can be set as an environment variable, the API will only look for that environment variable
+            if the property is not specified in the sesssion property list passed to
+            <a href="0ec74983-f98d-9b14-06bb-5f2f4c5cadd4.htm">CreateSession(SessionProperties, EventHandler<span id="LST2721B851_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_0?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>MessageEventArgs<span id="LST2721B851_1"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_1?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>, EventHandler<span id="LST2721B851_2"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_2?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>SessionEventArgs<span id="LST2721B851_3"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_3?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>)</a></p><p>
+             The names of the environment variables are based on the native library property names. 
+             </p><p>
+             The following environment variables are recognized:
+             <ul><li>SOLCLIENT_SESSION_PROP_PASSWORD <a href="64a585e4-3c0a-8e8c-cbb2-84cda82b33fd.htm">Password</a></li><li>SOLCLIENT_SESSION_PROP_HOST <a href="3d8e6034-0f60-467b-340b-aa63a4555f3a.htm">Host</a></li><li>SOLCLIENT_SESSION_PROP_GD_RECONNECT_FAIL_ACTION <a href="e6bf24d3-352e-521b-dac9-c36495c51570.htm">GdReconnectFailAction</a>
+                The acceptable strings for this environment variable are also based on the underlying native library:
+                <ol><li>"SOLCLIENT_SESSION_PROP_GD_RECONNECT_FAIL_ACTION_AUTO_RETRY" 
+                    (<a href="33da8dc9-789c-be48-a560-5e83ec05ec90.htm">AUTO_RETRY</a>)</li><li>"SOLCLIENT_SESSION_PROP_GD_RECONNECT_FAIL_ACTION_DISCONNECT" 
+                    (<a href="33da8dc9-789c-be48-a560-5e83ec05ec90.htm">DISCONNECT</a>)</li></ol></li></ul></p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID0RB')" onkeypress="SectionExpandCollapse_CheckKey('ID0RB', event)" tabindex="0"><img id="ID0RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Inheritance Hierarchy</span></div><div id="ID0RBSection" class="collapsibleSection"><a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_self">System<span id="LST2721B851_4"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_4?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Object</a><br />  <a href="8a8c7376-fa19-f512-d2be-1b67e03f647e.htm">SolaceSystems.Solclient.Messaging<span id="LST2721B851_5"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_5?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>BaseProperties</a><br />    <span class="selflink">SolaceSystems.Solclient.Messaging<span id="LST2721B851_6"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_6?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>SessionProperties</span><br /></div><p> </p><strong>Namespace:</strong> <a href="7f10bcf6-19f4-beff-0768-ced843e35168.htm">SolaceSystems.Solclient.Messaging</a><br /><strong>Assembly:</strong> SolaceSystems.Solclient.Messaging (in SolaceSystems.Solclient.Messaging.dll) Version: 7.2.1.27 (7.2.1.27)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="ID2RBSection" class="collapsibleSection"><div class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="ID1ECCA_tab1" class="codeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID1ECCA','cs','1','3');return false;">C#</a></div><div id="ID1ECCA_tab2" class="codeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID1ECCA','vb','2','3');return false;">VB</a></div><div id="ID1ECCA_tab3" class="codeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID1ECCA','cpp','3','3');return false;">C++</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID1ECCA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID1ECCA');return false;" title="Copy">Copy</a></div></div><div id="ID1ECCA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve">[<span class="identifier">SerializableAttribute</span>]
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">SessionProperties</span> : <span class="identifier">BaseProperties</span></pre></div><div id="ID1ECCA_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve">&lt;<span class="identifier">SerializableAttribute</span>&gt;
+<span class="keyword">Public</span> <span class="keyword">Class</span> <span class="identifier">SessionProperties</span>
+	<span class="keyword">Inherits</span> <span class="identifier">BaseProperties</span></pre></div><div id="ID1ECCA_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve">[<span class="identifier">SerializableAttribute</span>]
+<span class="keyword">public</span> <span class="keyword">ref class</span> <span class="identifier">SessionProperties</span> : <span class="keyword">public</span> <span class="identifier">BaseProperties</span></pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID1ECCA");</script></div><p>The <span class="selflink">SessionProperties</span> type exposes the following members.</p><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID3RB')" onkeypress="SectionExpandCollapse_CheckKey('ID3RB', event)" tabindex="0"><img id="ID3RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Constructors</span></div><div id="ID3RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="0e6576df-1ae0-07f7-5626-9c248e308aad.htm">SessionProperties</a></td><td><div class="summary">
+            Class constructor
+            
+            Developer Note: All properties MUST have a default even if deprecated to avoid casting null.
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID4RB')" onkeypress="SectionExpandCollapse_CheckKey('ID4RB', event)" tabindex="0"><img id="ID4RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="ID4RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="4dbeb3f7-d5b7-3c83-e356-a905d2820f1e.htm">Clear</a></td><td><div class="summary">
+            Removes all properties.
+            </div> (Inherited from <a href="8a8c7376-fa19-f512-d2be-1b67e03f647e.htm">BaseProperties</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="e021e03f-7453-f312-bd55-009ff619272a.htm">Clone</a></td><td><div class="summary">
+            Creates a new object that is a deep copy of the current instance. 
+            </div> (Inherited from <a href="8a8c7376-fa19-f512-d2be-1b67e03f647e.htm">BaseProperties</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="fe55a23b-de16-4f21-e32d-2d437ebf804f.htm">Equals</a></td><td><div class="summary">
+            Determines whether the specified Object is equal to the current Object.
+            </div> (Inherited from <a href="8a8c7376-fa19-f512-d2be-1b67e03f647e.htm">BaseProperties</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/4k87zsw7" target="_self">Finalize</a></td><td><div class="summary">
+                    Allows an <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_self">Object</a> to attempt to free resources and perform other cleanup operations before the <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_self">Object</a> is reclaimed by garbage collection.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_self">Object</a>.)</td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="7cc6ada8-4408-3241-c7fa-6455e8e0dd33.htm">FromDictionary</a></td><td><div class="summary">
+            Creates and returns a new <span class="code">SessionProperties</span> given a dictionary of key/value strings
+            <p>where:</p><p>key: is a string representation of a given <span class="code">SessionProperties</span> property <a href="155600a4-7430-1870-b49e-59b5984eea0d.htm">SessionProperties<span id="LST2721B851_7"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_7?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>PROPERTY</a>.</p><p>value: is a string representation of the value of that property.</p><p>Rules:</p><p>1. Keys that are not in the <span class="code">SessionProperties</span>' property set <a href="155600a4-7430-1870-b49e-59b5984eea0d.htm">SessionProperties<span id="LST2721B851_8"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_8?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>PROPERTY</a> are ignored and a warning log is generated.</p><p>2. If a property is omitted, the default value is used.</p><p>3. Validation and type checking is performed on the provided values; a conversion exception is thrown if
+               any of the provided values cannot be converted.</p><p>4. Read-only properties are ignored. </p></div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="21c05ac8-6de2-915a-b5ea-46877786e390.htm">FromDictionaryWithPrefix</a></td><td><div class="summary">
+            Creates and returns a new <span class="code">SessionProperties</span> from a dictionary of key/value strings
+            <p>where:</p><p>key: is a string representation of a given <span class="code">SessionProperties</span> property <a href="155600a4-7430-1870-b49e-59b5984eea0d.htm">SessionProperties<span id="LST2721B851_9"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_9?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>PROPERTY</a> prefixed with a string "prefix".</p><p>value: is a string representation of the value of that property.</p><p>Rules:</p><p>1. Keys that are not in the SessionProperties' property set <a href="155600a4-7430-1870-b49e-59b5984eea0d.htm">SessionProperties<span id="LST2721B851_10"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_10?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>PROPERTY</a>, are ignored and a warning log is generated.</p><p>2. If a property is omitted, the default value will be used.</p><p>3. Validation and type checking will be performed on the provided values, a conversion exception will be thrown if
+               any of the provided values cannot be converted.</p><p>4. Read-only properties are ignored.</p></div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="d3004b7e-c538-30a7-8306-ff30bbb4ce3e.htm">GetHashCode</a></td><td><div class="summary">
+            Serves as a hash function for a particular type. 
+            </div> (Inherited from <a href="8a8c7376-fa19-f512-d2be-1b67e03f647e.htm">BaseProperties</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="94c58db9-55fa-90b1-4cfa-2914b98ad30f.htm">GetPropertyValue</a></td><td><div class="summary">
+            Gets the property value associated with the given key.
+            </div> (Inherited from <a href="8a8c7376-fa19-f512-d2be-1b67e03f647e.htm">BaseProperties</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/dfwy45w9" target="_self">GetType</a></td><td><div class="summary">
+                    Gets the <a href="http://msdn2.microsoft.com/en-us/library/42892f65" target="_self">Type</a> of the current instance.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_self">Object</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/57ctke0a" target="_self">MemberwiseClone</a></td><td><div class="summary">
+                    Creates a shallow copy of the current <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_self">Object</a>.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_self">Object</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="7bc565cf-0e96-f44c-2c35-0c681652fcb3.htm">SetCCSMPProperty</a></td><td><div class="summary">
+            Sets a property to be passed directly to CCSMP. Properties set in this manner
+            will always override properties set using the shortcut properties, regardless
+            of order.
+            </div> (Inherited from <a href="8a8c7376-fa19-f512-d2be-1b67e03f647e.htm">BaseProperties</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="da6e6882-f5ae-d052-c1f1-1a2c354130c7.htm">SetPropertyValue</a></td><td><div class="summary">
+            Associates a property key with a property value.
+            </div> (Inherited from <a href="8a8c7376-fa19-f512-d2be-1b67e03f647e.htm">BaseProperties</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="73f8f8e5-2e23-e3ad-4116-ce77b15ea1b8.htm">ToDictionary</a></td><td><div class="summary">
+            Returns a new <span class="code">IDictionary</span> instance where:
+            <p>key: is a string representation of a given SessionProperties property <a href="155600a4-7430-1870-b49e-59b5984eea0d.htm">SessionProperties<span id="LST2721B851_11"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_11?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>PROPERTY</a>.</p><p>value: is a string representation of the value of that property, or null if the property's value is null.</p>
+            Note that only readable and writable properties are returned in the dictionary. Read-only properties are ignored.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="403b3d26-c351-db21-0c3c-ec383fd3bae1.htm">ToDictionaryWithPrefix</a></td><td><div class="summary">
+            Returns a new <span class="code">IDictionary</span> instance where:
+            <p>key: is a string representation of a given <span class="code">SessionProperties</span> property <a href="155600a4-7430-1870-b49e-59b5984eea0d.htm">SessionProperties<span id="LST2721B851_12"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_12?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>PROPERTY</a> prefixed with a string "prefix".</p><p>value: is a string representation of the value of that property, or <span class="code">null</span> if the property's value is null.</p>
+            Note that only readable and writable properties are returned in the dictionary. Read-only properties are ignored.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="cb1f8fba-0459-3c36-d5f0-9de687c0b705.htm">ToString</a></td><td><div class="summary">
+            Returns a String that represents the current Object. 
+            </div> (Overrides <a href="http://msdn2.microsoft.com/en-us/library/7bxwbwt2" target="_self">Object<span id="LST2721B851_13"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_13?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>ToString<span id="LST2721B851_14"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_14?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>.)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID5RB')" onkeypress="SectionExpandCollapse_CheckKey('ID5RB', event)" tabindex="0"><img id="ID5RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Properties</span></div><div id="ID5RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="4f777e03-886a-2f9e-8d62-4fc03dfaeb22.htm">AckEventMode</a></td><td><div class="summary">
+            Specifies if an <a href="20084581-3120-23a3-bc9a-2e57404e2c40.htm">Acknowledgement</a> session event acknowledges a single message 
+            (<a href="d6fe3dd1-ade7-3a8d-a43d-603156468384.htm">PER_MSG</a>) or a range of messages (<a href="d6fe3dd1-ade7-3a8d-a43d-603156468384.htm">WINDOWED</a>).  
+            <p>
+            Setting this property to <a href="d6fe3dd1-ade7-3a8d-a43d-603156468384.htm">WINDOWED</a> will not affect <a href="20084581-3120-23a3-bc9a-2e57404e2c40.htm">RejectedMessageError</a> events, 
+            they will still be emitted on a per message basis. 
+            </p>
+            Default: <a href="d6fe3dd1-ade7-3a8d-a43d-603156468384.htm">PER_MSG</a></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="14d07d57-f952-1ac8-23f2-8ceeb1337176.htm">ADPublishAckTimerInMsecs</a></td><td><div class="summary">
+            The duration of the publisher acknowledgement timer (in milliseconds). 
+            When a published message is not acknowledged within the time specified for this timer, the API automatically retransmits the message. 
+            There is no limit on the number of retransmissions for any message. However, while the API is resending, applications can become flow controlled. 
+            The flow control behavior is controlled by SessionProperties.SendBlocking and SessionProperties.BlockingWriteTimeoutInMsecs.
+            <p>
+            The valid range is 20..60000. Default: 2000
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="247f4507-a3c6-185f-03cc-c1bb45e9bca4.htm">ADPublishWindowSize</a></td><td><div class="summary">
+            The publisher window size for Guaranteed messages. The Guaranteed Message Publish
+            Window Size property limits the maximum number of messages that can be published 
+            before the API must receive an acknowledgement from the appliance.
+            Default: 50.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="d67aed36-1bdb-7e0a-3da4-2ac07029892c.htm">AuthenticationScheme</a></td><td><div class="summary">
+            Specifies the authentication scheme to be used by the corresponding ISession. For more information about the
+            types of authentication schemes that can be set, see <a href="43d56ef9-7b2d-9be5-4707-29b33a2ee825.htm">AuthenticationSchemes</a>.
+            <br>
+            Default: <a href="43d56ef9-7b2d-9be5-4707-29b33a2ee825.htm">BASIC</a></br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="22e6fc0c-6961-c290-a136-c07d873d526b.htm">BindIP</a></td><td><div class="summary">
+            (Optional) The hostname or IP address of the machine on which the application is
+            running. On a multi-homed machine, it is strongly recommended to provide this
+            parameter to ensure that the API uses the correct network interface at session
+            connect time. Default: empty string
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="fcbab774-259f-6a62-779b-2bb172ead260.htm">BlockingWriteTimeoutInMsecs</a></td><td><div class="summary">
+            The timeout period (in milliseconds) for blocking write operation. The valid range is &gt; 0. 
+            <br>
+            Default: 100000
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="06c90f89-3c33-8c8f-0a53-b0f8bf80d591.htm">BlockWhileConnecting</a></td><td><div class="summary">
+            To block the calling thread on operations such as sending a message, 
+            subscribing or unsubscribing when the session is being connected or reconnected. 
+            The operation must already be blocking (see SendBlocking).         
+            Otherwise, <a href="4eaedb16-3901-03fb-e300-7a327dc5495f.htm">SOLCLIENT_NOT_READY</a> is returned if the session is being connected. Default: true         
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="80af69b1-a67b-d27b-60e8-307a0f055042.htm">CalculateMessageExpiration</a></td><td><div class="summary">
+            When this property is set to true and the message's <a href="ab18887f-05eb-c044-2ca6-8489a28eb6fb.htm">TimeToLive</a> is set (has a non-zero value), the API updates the
+            message's <a href="0c04c3c3-681f-520f-6a90-df2cdc35f8f8.htm">Expiration</a> property with the sum of message's Time-To-Live and the UTC timestamp value after it has been sent or received.
+            Default: false
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="40f114ae-bcee-662c-9e10-cf5ac6750c95.htm">ClientDescription</a></td><td><div class="summary">
+            A string that describes the application instance. This string is available from SolAdmin or CLI.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="29d2134c-2348-8d7a-a642-60b31d456f75.htm">ClientMode</a></td><td> <strong>Obsolete. </strong><div class="summary">
+            Set to true to enable client mode. Client mode uses a single TCP connection to the appliance
+            for both publisher and subscriber channels. To use this mode, the appliance requires a Topic Routing Blade.         
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="f2ff05d9-93f8-1a3a-102b-b8e8df3db486.htm">ClientName</a></td><td><div class="summary">
+            The session client name that is used during client login (appliances running SolOS-TR only) 
+            to create a unique session. 
+            An empty string causes a unique client name to be generated automatically. 
+            If specified, it must be a valid Topic name and a maximum of 160 bytes in length. 
+            For all appliances (SolOS-TR) the <a href="f2ff05d9-93f8-1a3a-102b-b8e8df3db486.htm">ClientName</a> is also used to uniquely identify the sender in a message's 
+            senderId field if <a href="056d8b31-5bf7-6854-d13e-4f58c01896a4.htm">IncludeSenderId</a> is set to true.  
+            Default: empty string
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="3bc8f5f0-1dee-156c-fee5-d770de373d06.htm">CompressionLevel</a></td><td><div class="summary">
+            Enables messages to be compressed with ZLIB before transmission and decompressed on receive.  
+            The valid range is 0 (off), or 1..9, where 1 is less compression (fastest) and 9 is most
+            compression (slowest). Compression is only supported when the session is connected to an
+            appliance running SolOS-TR.
+            Default: 0 (no compression)
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="cf2f06c5-0d48-e594-b69b-c4bcb41c29e1.htm">ConnectBlocking</a></td><td><div class="summary">
+            Use true to enable blocking connection operation.
+            Default: true
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="2433e95a-25ab-53a0-1874-15e9a35ac1ab.htm">ConnectRetries</a></td><td><div class="summary">
+            How many times to try to connect to the host appliance (or list of appliances) 
+            during connection setup. Zero means no automatic connection retries 
+            (that is, try once and give up). 
+            -1 means try to connect forever. The default valid range is &gt;= -1. 
+            <p>
+            API reattempts a connection retry, it begins with the first host listed. 
+            For example, if a SOLCLIENT_SESSION_PROP_CONNECT_RETRIES value of two is 
+            used, the API could possibly work through all of the listed hosts 
+            without connecting to them three times: one time through for the 
+            initial connect attempt, and then two times through for connect 
+            retries.		
+            </p><p> 
+            After each unsuccessful attempt to connect to a host, the API waits for 
+            the amount of time set for 
+            <a href="a09be72f-93b5-48c9-066d-12e1edf57926.htm">ReconnectRetriesWaitInMsecs</a>  
+            before attempting another connection to a host, and the number times to 
+            attempt to connect to one host before moving on to the next listed host 
+            is determined by the value set for 
+            <a href="ed6954eb-311e-8ca5-8c38-8feab09d4d72.htm">ConnectRetriesPerHost</a>.
+            </p><p>	
+            See <a href="3d8e6034-0f60-467b-340b-aa63a4555f3a.htm">Host</a> for more details on the reconnect logic.
+            </p><p>
+            Zero means no automatic connection retries (that is, try once and give up). 
+            -1 means retry forever. The valid range is &gt;= -1. 
+            Default: 0 
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="ed6954eb-311e-8ca5-8c38-8feab09d4d72.htm">ConnectRetriesPerHost</a></td><td><div class="summary">
+            When using a host list for the <a href="3d8e6034-0f60-467b-340b-aa63a4555f3a.htm">Host</a>, 
+            this property defines how many times to try to connect or reconnect 
+            to a single host before moving to the next host in the list. 
+            <p> 
+            A value of 0 (the default) means make a single connection attempt (that is, 
+            0 retries). A value of -1 means attempt an infinite number of reconnect 
+            retries (that is, the API only tries to connect or reconnect to first host 
+            listed.) Default: 0 
+            </p><p><strong>NOTE:</strong> This property works in conjunction with the connect and 
+            reconnect retries settings; It does not replace them.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="d3f2cb47-bd37-7009-9bb0-7c54b90319e4.htm">ConnectTimeoutInMsecs</a></td><td><div class="summary">
+            The timeout period (in milliseconds) for a connect operation. The valid range is &gt; 0.
+            <br>
+            Default: 30000
+            </br></div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="0ec59aed-48c4-f877-1649-dacd9d350dcd.htm">Count</a></td><td><div class="summary">
+            Returns the count of properties.
+            </div> (Inherited from <a href="8a8c7376-fa19-f512-d2be-1b67e03f647e.htm">BaseProperties</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="e6bf24d3-352e-521b-dac9-c36495c51570.htm">GdReconnectFailAction</a></td><td><div class="summary">
+             Specify the behavior when the CCSMP API is unable to reconnect guaranteed delivery after 
+             reconnecting the session. This may occur if the session is configured with a host list where
+             each Solace router in the host list is unaware of the state on the previous router. It can also
+             occur if the time to reconnect to the same router exceeds the publisher flow timeout on 
+             the router.
+             <p>
+            May be set as an environment variable.  (see <span class="selflink">SessionProperties</span>)
+            </p>
+            Default: <a href="33da8dc9-789c-be48-a560-5e83ec05ec90.htm">AUTO_RETRY</a></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="3cc10e83-14e9-7868-f643-32863e8e7b4d.htm">GenerateReceiveTimestamps</a></td><td><div class="summary">
+            When enabled, a receive timestamp is recorded for each message and passed 
+            back as a property of IMessage.
+            Default: false
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="6a6cada9-be0d-0512-19f5-b27da389d5e7.htm">GenerateSendTimestamps</a></td><td><div class="summary">
+            When enabled, a send timestamp is automatically generated as a message property for each message sent.  
+            Default: false
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="efbeac53-4d55-f9e4-c494-b97d5c0a37fd.htm">GenerateSequenceNumber</a></td><td><div class="summary">
+            When enabled, a sequence number is automatically included in the Solace-defined fields for each message sent.  
+            Default: false
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="3d8e6034-0f60-467b-340b-aa63a4555f3a.htm">Host</a></td><td><div class="summary">
+             The IP address (or host name) to connect to. 
+             Multiple host entries separated by commas (up to sixteen) are allowed. 
+             With multiple entries, each is tried in turn until one succeeds.   
+             
+             <h4>Host entry</h4><p><a href="3d8e6034-0f60-467b-340b-aa63a4555f3a.htm">Host</a> contains one or more host entries (up to sixteen). The host entry may also include 
+             an optional ProxyHost configuration, separated from the message router configuration by a percent (%) sign. 
+             A host entry has the following form:
+             </p><p><strong>[Protocol:]Host[:Port][%ProxyService]</strong><br /><br /></p><p><strong>Protocol</strong> is the protocol used for the transport channel. The valid values are: <br /><br /><ul><li> tcp - use a TCP channel for communications between the application and its peers. If no protocol is set, tcp is used as a default.</li><li> tcps - use a SSL channel over TCP for communications between the application and its peers. The encryption with compression is not supported.</li><li> http - use HTTP channels or a WebSocket channel over TCP for communications between the application and 
+             its peers. Web Messaging with compression is not supported.</li><li>https - use HTTP channels or a WebSocket channel over SSL for communications between the application
+             and its peers. Web Messaging with compression is not supported.</li></ul></p><p><strong>Host</strong> is the IP address (or host name) to connect to for a connection. <br /></p><p><strong>Port</strong> is the port to connect to for a connection. A value is only required when using a port other than the automatically assigned 
+             default port number. The default port for TCP is 55555 when compression is not in use, or 55003 when compression is in use. The default port 
+             for SSL is 55443.</p><br /><br /><p><strong>ProxyService</strong> is a description of the non-transparent proxy.  If it is necessary to configure the proxy server that is used to connect to
+             the message router, then the proxy server is configured in the ProxyService string. The ProxyService string format is specified as:
+             </p><p><strong>[ProxyProtocol]://[username:password@]proxyHost[:proxyPort]</strong><br /><strong>ProxyProtocol</strong> is the protocol used to communication with the proxy server. The valid values are:<br /><br /><ul><li>socks5 - Connect to the server with the SOCKS Protocol Version 5, RFC 1928 (IETF Standards Track Document)</li><li>httpc -  Connect to the server with the HTTP Connect Protocol, RFC 2817 (IETF Standards Track Document)</li></ul></p><p>
+             If authentication is required for the proxy server, the <strong>username</strong> and <strong>password</strong> may be 
+             optionally specified before the proxy host.
+             </p><p><strong>proxyHost</strong> is the IP address (or host name) of the proxy server.
+             </p><p><strong>proxyPort</strong> is the port to connect to for a connection. If the port number is not specified, the 
+             default for SOCKS5 is port 1080, and the default for Http-Connect is port 3128.
+             </p><p>
+             The following examples show how to specify transport channel types. Unless it is otherwise specified, the default port 55555 is used.
+             <ol><li> 192.168.160.28 - connect to IP address 192.168.160.28 over TCP. </li><li> tcp:192.168.160.28 - connect to IP address 192.168.160.28 over TCP. </li><li> tcps:192.168.160.28 - connect to IP address 192.168.160.28 and port 55443 over SSL over TCP. </li><li> tcp:192.168.160.28:44444 - connect to IP address 192.168.160.28 and port 44444 over TCP. </li></ol></p><p>
+             The following examples show how to connect to a message router through a proxy server.
+             <ol><li>192.168.160.28%socks5://192.168.1.1 - connect to message router at 192.168.160.28 through a SOCKS5 proxy server at 192.168.1.1.</li><li>192.168.160.28%httpc://192.168.1.1 - connect to message router at 192.168.160.28 through a HTTP-Connect proxy server at 192.168.1.1.</li><li>tcps:solace.company.com%socks5://User:PassWord@proxy.company.com:13128 - connect to message router at solace.company.com using
+             SSL over TCP through a SOCKS5 proxy server at proxy.company.com, port 13128. Authenticate with the proxy server using username <strong>User</strong>
+             and password <strong>PassWord</strong>.</li><li> tcp://192.168.160.27:44444%httpc://proxy.company.com:11080 - connect to the message router at 192.168.160.28, 
+             port 44444, using HTTP Connect through the proxy server at proxy.company.com, port 11080.</li></ol></p><h4>Configuring Multiple Hosts for Redundancy and Failover</h4><p>
+             Some applications might want to have a list of appliances available for 
+             connection. Typically these appliances will be in separate geographic 
+             locations and use of a host list allows applications to fail over to the
+             alternate connections if the first appliance is unavailable. The host
+             list is configured in the Host property of SessionProperties as a comma
+             separated list of hosts. Each host can optionally include a port number
+             as well. For example, if there are two appliances at 192.168.160.128 and
+             192.168.160.129, but the second is using the non-default port 50005 for the
+             message bus, the SessionProperties.Host would be configured as: 
+             
+             <p>SessionProperties.Host = "192.168.160.128,192.168.160.129:50005" </p><br />
+             
+             In this case, when <a href="358e15a6-e980-5d2f-497d-ffebca2514c5.htm">Connect<span id="LST2721B851_15"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_15?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> is called, the API attempts to
+             connect, first to 192.168.160.128, if that connection fails for any
+             reason it attempts to connect to 192.168.160.129:50005. This process is
+             repeated until all entries in the host list are attempted. After each entry
+             has been attempted, if all fail, the session properties <a href="2433e95a-25ab-53a0-1874-15e9a35ac1ab.htm">ConnectRetries</a>
+             and <a href="a09be72f-93b5-48c9-066d-12e1edf57926.htm">ReconnectRetriesWaitInMsecs</a> determine the behavior of
+             the API. If <a href="2433e95a-25ab-53a0-1874-15e9a35ac1ab.htm">ConnectRetries</a> is non-zero, SolClient
+             waits for <a href="a09be72f-93b5-48c9-066d-12e1edf57926.htm">ReconnectRetriesWaitInMsecs</a> milliseconds then starts connection
+             attempts again from the beginning of the list.    
+             </p><p>
+             If an established session fails, to any host in the list, when 
+             <a href="9a8e7dd1-9741-4ebd-72a4-54ad2856c996.htm">ReconnectRetries</a> is non-zero, then API automatically attempts
+             to reconnect, starting at the beginning of the list. 
+             Note that the session connect timer, 
+             <a href="d3f2cb47-bd37-7009-9bb0-7c54b90319e4.htm">ConnectTimeoutInMsecs</a>, runs separately for each connection attempt. 
+             So an application waiting for a connection established <a href="20084581-3120-23a3-bc9a-2e57404e2c40.htm">UpNotice</a> or connection failure 
+             <a href="20084581-3120-23a3-bc9a-2e57404e2c40.htm">ConnectFailedError</a> could have to wait up to 
+             ( (number of hosts in the hosts list) times (<a href="d3f2cb47-bd37-7009-9bb0-7c54b90319e4.htm">ConnectTimeoutInMsecs</a>) ) for the event.
+             </p><h4>Multiple Hosts and Guaranteed Messaging </h4>
+             If a client application publishes Guaranteed messages ( <a href="083ca907-e90d-9522-5581-d5407d52ba26.htm">NonPersistent</a> 
+             or <a href="083ca907-e90d-9522-5581-d5407d52ba26.htm">Persistent</a> )
+             and then a disconnect occurs, the API will automatically reconnect to other
+             listed hosts. However, because another host will not know the state of the publisher flow
+             to the original host, the API must reset publisher flow state.  Unacknowledged messages are
+             renumbered and resent by the API.  If the alternate router is configured as a replication site this
+             may lead to duplicate messages in the system.  It is up to the application to resolve this duplication
+             in what ever way is appropriate to the application.
+             <p>
+             Applications may wish to configure the session so that auto-reconnect only occurs if no guaranteed
+             messages have been published. This is the legacy behaviour of the API. If this is desired the
+             set the session property <a href="e6bf24d3-352e-521b-dac9-c36495c51570.htm">GdReconnectFailAction</a>  to the value
+             <a href="33da8dc9-789c-be48-a560-5e83ec05ec90.htm">DISCONNECT</a>.  This session property can also be
+             set as environment variable which then allows legacy applications to run without modification or
+             recompile.
+             </p><p>
+             May be set as an environment variable.  (see <span class="selflink">SessionProperties</span>)
+             </p><br /><br />
+             Default: empty string
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="007cbbf9-ff4d-4dec-ca9b-92c03a4f28e1.htm">IgnoreDuplicateSubscriptionError</a></td><td><div class="summary">
+            Set to true ignore errors for duplicate subscription/topic on subscribe or unsubscribe.
+            Default: true
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="056d8b31-5bf7-6854-d13e-4f58c01896a4.htm">IncludeSenderId</a></td><td><div class="summary">
+            When enabled, a sender ID is automatically included in the Solace-defined fields for each message sent.  
+            Default: false 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="ba75a756-3af6-4610-4411-9a5763aaa4c7.htm">KeepAliveIntervalInMsecs</a></td><td><div class="summary">
+            Use 0 to disable keep-alive. If not zero, the minimum valid value is 50. 
+            Default: 3000.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="59fdb4c9-8e2b-250a-6ed5-f5b6d5abd3a7.htm">KeepAliveIntervalsLimit</a></td><td><div class="summary">
+            The number of keep-alive intervals with no received traffic that are allowed before a session is declared down. 
+            The minimum valid value is 3.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="64e2ee0e-1147-3b4c-5282-6af6bee59b7f.htm">KRBServiceName</a></td><td><div class="summary">
+            This property specifies the ServiceName of Service Principle Name (SPN) for Kerberos.
+            It is used for all entries specified by the property <a href="3d8e6034-0f60-467b-340b-aa63a4555f3a.htm">Host</a>
+            
+            The Service Principal Name (SPN) has the format "ServiceName/ApplianceName@REALM" where
+            ServiceName is specified by this property, ApplianceName is the host portion of an entry specified by <a href="3d8e6034-0f60-467b-340b-aa63a4555f3a.htm">Host</a>,
+            and REALM is obtained from the Kerberos configuration.
+            
+            The maximum length for an SPN is 256 characters.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="489a8a79-bccc-eade-c7ea-8cbd41a63255.htm">MaxFlowsPerSession</a></td><td> <strong>Obsolete. </strong><div class="summary">
+            The maximum number of flows supported on this session. Default: 100.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="a162a344-bab3-3887-df39-d3682c460669.htm">ModifyPropertyTimeoutInMsecs</a></td><td><div class="summary">
+            Maximum amount of time (in milliseconds) to wait for session property modification.
+            Default: 100000 (10 seconds)
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="8658fb67-92f3-7334-515f-4f0782e744e5.htm">NoLocal</a></td><td><div class="summary">
+            If this property is true, messages published on the session cannot be received on the
+            same session even if the client has a subscription that matches the published topic.  
+            If this restriction is requested and the appliance does not have No Local support, 
+            the session connects fail with subcode <a href="1dd5e649-a3ad-e357-604c-c56486a6db94.htm">NoLocalNotSupported</a>.
+            Default: false
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="db4d9900-e5ff-d9ac-986c-a18f0ea504ec.htm">P2PInboxInUse</a></td><td><div class="summary">
+            A read-only informational string that indicates the default reply-to destination string that is used when 
+            a sent request message does not have a reply-to destination specified. 
+            See <a href="2efacf42-833b-761c-8414-cd3ff28777bd.htm">SendRequest(IMessage, IMessage<span id="LST2721B851_16"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST2721B851_16?cpp=%");</script>, Int32)</a> for more details.
+            This parameter is only valid when session is connected. Defaults to empty string, when it is not connected.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="64a585e4-3c0a-8e8c-cbb2-84cda82b33fd.htm">Password</a></td><td><div class="summary">
+            The password required for authentication.
+            <p>
+            May be set as an environment variable.  (see <span class="selflink">SessionProperties</span>)
+            </p>
+            Default: empty string
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="2756887b-33bb-fe03-bde8-991ca32901f1.htm">Port</a></td><td> <strong>Obsolete. </strong><div class="summary"><p>
+            This property is deprecated. While still supported, the port number can also now be specified as part of the host in Host (e.g. "hostname:55555"). 
+            In general, port numbers are not needed to be specified except in special situations. 
+            If this property is set, this port number is used for all entries in <a href="3d8e6034-0f60-467b-340b-aa63a4555f3a.htm">Host</a> that do not explicitly specify port.  
+            </p>
+            It represents the port number to connect to. Valid range is 0..65535; 0 means use default for the selected CompressionLevel.
+            <p>
+            Default: 0 (getting this property returns the appropriate default port: 55003 if compression is enabled, 55555 otherwise).
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="f5d82277-809c-8ca1-13ef-7ac608733a2c.htm">ProvisionTimeoutInMsecs</a></td><td><div class="summary">
+            The timeout (in milliseconds) for an endpoint provision or deprovision confirmation.
+            The valid range is &gt;= 1000.
+            <br>
+            Default: 3000 
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="3a6712ec-4ee6-f062-6deb-0621a786b723.htm">ReapplySubscriptions</a></td><td><div class="summary">
+            Set to true to allow the API to remember subscriptions and reapply them upon a session reconnect. 
+            <p><strong>Note:</strong> Reapply subscriptions will only apply direct topic subscriptions unpon a Session reconnect. 
+            It will not reapply topic subscriptions on durable and non-durable endpoints.
+            </p>
+            Default: false
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="9a8e7dd1-9741-4ebd-72a4-54ad2856c996.htm">ReconnectRetries</a></td><td><div class="summary">
+            How many times to retry to connect to the host appliance (or list of 
+            appliances) after a connected session goes down.   
+            <p>
+            When using a host list, each time the API works through the host list 
+            without establishing a connection is considered a reconnect retry. If the 
+            API reattempts a reconnect retry, it begins with the first host listed. 
+            For example, if a 
+            <a href="9a8e7dd1-9741-4ebd-72a4-54ad2856c996.htm">ReconnectRetries</a> value of two is 
+            used, the API could possibly work through all of the listed hosts 
+            without connecting to them three times: one time through for the 
+            initial connect attempt, and then two times through for reconnect 
+            retries.		
+            </p><p> 
+            After each unsuccessful attempt to reconnect to a host, the API waits for 
+            the amount of time set for 
+            <a href="a09be72f-93b5-48c9-066d-12e1edf57926.htm">ReconnectRetriesWaitInMsecs</a>  
+            before attempting another connection to a host, and the number times to 
+            attempt to connect to one host before moving on to the next listed host 
+            is determined by the value set for 
+            <a href="ed6954eb-311e-8ca5-8c38-8feab09d4d72.htm">ConnectRetriesPerHost</a>.
+            </p><p>	
+            See <a href="3d8e6034-0f60-467b-340b-aa63a4555f3a.htm">Host</a> for more details on the reconnect logic.
+            </p><p>
+            Zero means no automatic reconnection attempts (that is, try once and give up).  
+            -1 means try to reconnect forever. The valid range is &gt;= -1. 
+            Default: 0
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="a09be72f-93b5-48c9-066d-12e1edf57926.htm">ReconnectRetriesWaitInMsecs</a></td><td><div class="summary">
+            How much time (in ms) to wait between each attempt to connect or reconnect to a host. 
+            If a connect or reconnect attempt to host is not 
+            successful, the API waits for the amount of time set for 
+            <a href="a09be72f-93b5-48c9-066d-12e1edf57926.htm">ReconnectRetriesWaitInMsecs</a>, 
+            and then makes another connect or reconnect attempt. 
+            <a href="ed6954eb-311e-8ca5-8c38-8feab09d4d72.htm">ConnectRetriesPerHost</a> sets 
+            how many connection or reconnection attempts can be made 
+            before moving to the next host in the list. 
+            <p>
+            The valid range is &gt;=0. 
+            Default: 3000
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="9c65421d-738e-81b6-0876-f6d6c69ffbbf.htm">SdkBufferSize</a></td><td><div class="summary">
+            Controls the buffering of transmit messages. When sending small messages, the session buffer size
+            should be set to multiple times the typical message size to improve performance. Regardless of the buffer
+            size, the API always accepts at least one message to transmit. So even if a single message's size exceeds
+            this value, it is accepted and transmitted, as along as the current buffered data is zero.
+            However, no more messages are accepted until the amount of data buffered is reduced below this value.  
+            <br>
+            Default: 90000
+            </br>/// 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="9369000e-6797-5dda-8e6a-f6cf486c736c.htm">SendBlocking</a></td><td><div class="summary">
+            Set to true to enable blocking send operation.
+            <br>
+            Default: true
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="e657ff80-2bfc-80f4-f5b3-57827fef357a.htm">SocketReceiveBufferSizeInBytes</a></td><td><div class="summary">
+            The socket receive buffer size value. 0 indicates do not set and leave at operating system default. The 
+            valid range is 0 or &gt;= 1024.
+            <br>
+            Default: 150000
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="fe07a2d5-317b-213d-abff-39196c69894c.htm">SocketSendBufferSizeInBytes</a></td><td><div class="summary">
+            The socket send buffer size value. 0 indicates do not set and leave at operating system default. The 
+            valid range is 0 or &gt;= 1024.
+            <br>
+            Default: 90000
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="6182b02b-d4aa-fda5-b747-6f1941b648b2.htm">SSLCipherSuites</a></td><td><div class="summary">
+            Specifies a comma separated list of the cipher suites.
+            Allowed cipher suites are: 'ECDHE-RSA-AES256-GCM-SHA384', 'ECDHE-RSA-AES256-SHA384', 'ECDHE-RSA-AES256-SHA', 
+            'AES256-GCM-SHA384', 'AES256-SHA256', 'AES256-SHA', 'ECDHE-RSA-DES-CBC3-SHA', 'DES-CBC3-SHA', 
+            'ECDHE-RSA-AES128-GCM-SHA256', 'ECDHE-RSA-AES128-SHA256', 'ECDHE-RSA-AES128-SHA', 'AES128-GCM-SHA256', 
+            'AES128-SHA256', 'AES128-SHA', 'RC4-SHA', 'RC4-MD5'.
+            <br>
+            Default: "ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES256-SHA384,ECDHE-RSA-AES256-SHA,AES256-GCM-SHA384,AES256-SHA256,AES256-SHA,ECDHE-RSA-DES-CBC3-SHA,DES-CBC3-SHA,ECDHE-RSA-AES128-GCM-SHA256,ECDHE-RSA-AES128-SHA256,ECDHE-RSA-AES128-SHA,AES128-GCM-SHA256,AES128-SHA256,AES128-SHA,RC4-SHA,RC4-MD5"
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="512887e1-4ee9-dc8e-51c1-0dd1b1d59a27.htm">SSLClientCertificateFile</a></td><td><div class="summary">
+            The filename of the client certificate file. Required when <a href="d67aed36-1bdb-7e0a-3da4-2ac07029892c.htm">AuthenticationScheme</a>
+            is set to <a href="43d56ef9-7b2d-9be5-4707-29b33a2ee825.htm">CLIENT_CERTIFICATE</a>. When specified, 
+            a value of "" (or empty string) will cause a <a href="1dd5e649-a3ad-e357-604c-c56486a6db94.htm">ParamOutOfRange</a> failure when
+            connecting the session.
+            <br>
+            Default: null
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="fdb016b9-d674-c59c-785c-e089561d4cc3.htm">SSLClientPrivateKeyFile</a></td><td><div class="summary">
+            The filename of the client's private key. Required when <a href="d67aed36-1bdb-7e0a-3da4-2ac07029892c.htm">AuthenticationScheme</a>
+            is set to <a href="43d56ef9-7b2d-9be5-4707-29b33a2ee825.htm">CLIENT_CERTIFICATE</a>. When specified, 
+            a value of "" (or empty string) will cause a <a href="1dd5e649-a3ad-e357-604c-c56486a6db94.htm">ParamOutOfRange</a> failure when
+            connecting the session.
+            <br>
+            Default: null
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="ee52be09-eccf-b909-0a09-04c6160d9322.htm">SSLClientPrivateKeyFilePassword</a></td><td><div class="summary">
+            The password to decrypt and read the <a href="fdb016b9-d674-c59c-785c-e089561d4cc3.htm">SSLClientPrivateKeyFile</a>.
+            This property is optional. When specified, 
+            a value of "" (or empty string) will cause a <a href="1dd5e649-a3ad-e357-604c-c56486a6db94.htm">ParamOutOfRange</a> failure when
+            connecting the session.
+            <br>
+            Default: null
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="fb1f2f53-0b13-f778-7e5f-dc19e4cb8169.htm">SSLConnectionDowngradeTo</a></td><td><div class="summary">
+            Specifies a transport protocol that SSL connection will be downgraded to after client authentication. Allowed transport protocol is "PLAIN_TEXT"
+            <br>
+            Default: null
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="a14db5a1-59d9-ecca-05e7-bb75bf12b874.htm">SSLExcludedProtocols</a></td><td><div class="summary">
+            Specifies a comma separated list of excluded SSL protocol(s).
+            Valid protocols are 'SSLv3', 'TLSv1', 'TLSv1.1', 'TLSv1.2'.
+            <br>
+            Default: ""
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="2bfe992c-f593-2aa5-5075-347af50a5fe6.htm">SSLProtocol</a></td><td> <strong>Obsolete. </strong><div class="summary">
+            This property is deprecated. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="d33572d2-33d1-12a1-d6f8-441534a2f8b4.htm">SSLTrustedCommonNameList</a></td><td><div class="summary">
+            Specifies  a comma separated list of acceptable common names in certificate validation.
+            The number of common names specified by an applications is limited to 16.
+            If the application does not provide any common names, there is no common name verification.
+            <br>
+            Default: empty string
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="44008baf-b165-eb78-ce40-afc0357bb578.htm">SSLTrustStoreDir</a></td><td><div class="summary">
+            Specifies the directory where the trusted certificates are. A maximum of 32 certificates will be loaded.
+            The maximum depth for the certificate chain verification that shall be allowed is 3.
+            <br>
+            Default: null
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="7b71f69d-f80f-9e63-1a42-d3d858cff44f.htm">SSLValidateCertificate</a></td><td><div class="summary">
+             Indicates if the certificate validation with certificates in the truststore is enabled.
+             Default: true
+            
+             <p><strong>Note on certificate validation: </strong>
+             When validating certificates, the messaging APIs for C and .NET use the
+             following validation rules, after building the chain from the server
+             certificate to a self-signed root certificate using certificates presented by
+             the server and certificates in the trust store : 
+             <ul><li>Verify the root certificate is trusted.</li><li>Verify depth of the chain is &lt;= 3. </li></ul>
+             Java and JMS messaging APIs use the same rules as C and .NET with the following
+             exceptions:
+             <ul><li>Depth validation is not enforced in Java or JMS.</li><li>When the server presents an incomplete certificate chain, Java/JMS messaging
+             APIs only require the signer of the incomplete certificate chain to be in the
+             trust store, where this could be insufficient for C/.NET APIs.</li></ul>
+             Therefore C and .NET messaging APIs certificate validation rules are more
+             restrictive, hence if a certificate is accepted by C or .NET, it will
+             definitely be accepted by Java and JMS. 
+             </p><br>
+             Default: true
+             </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="8e3301b9-e2d6-c490-b2ee-516b8a3b7adf.htm">SSLValidateCertificateDate</a></td><td><div class="summary">
+            Indicates if the session connection should fail when a certificate with an invalid date is received.
+            <br>
+            Default: true
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="83a3d11c-939f-58dc-8e06-eb0402a7c22d.htm">SubscribeBlocking</a></td><td><div class="summary">
+            Set to true to enable blocking subscribe/unsubscribe operation.
+            <br>
+            Default: true
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="597450ae-ac2f-6ec1-1759-3f6fe9bab9d8.htm">SubscribeConfirmTimeoutInMsecs</a></td><td><div class="summary">
+            The timeout (in milliseconds) for an add or remove subscription confirmation.
+            The valid range is &gt;= 1000.
+            Default: 10000 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="db7f5a44-0eda-abf1-9e4f-9995b86404ae.htm">SubscriberLocalPriority</a></td><td><div class="summary">
+            Subscriber priorities are used to choose a client to receive messages that are sent with the <a href="4c677822-1468-394d-1029-3ac72fc0dfbb.htm">DeliverToOne</a> property set to true. 
+            These messages are sent to the subscriber with the highest priority. Subscribers have two priorities; this priority (SubscriberLocalPriority) 
+            is for messages published locally. 
+            <p>
+            The valid range is 1..4. 
+            Default: 1 
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="075bd363-8566-0581-3474-f403e1d3068b.htm">SubscriberNetworkPriority</a></td><td><div class="summary">
+            Subscriber priorities are used to choose a client to receive messages that are sent with the <a href="4c677822-1468-394d-1029-3ac72fc0dfbb.htm">DeliverToOne</a> property set to true. 
+            These messages are sent to the subscriber with the highest priority. Subscribers have two priorities; this priority (SubscriberNetworkPriority) 
+            is for messages published on appliances other than the one that the client is connected to.  
+            <p>
+            Valid range is 1..4. 
+            Default: 1 
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="c1696908-cd92-c7ff-2c50-82f6e89b397b.htm">TcpNoDelay</a></td><td><div class="summary">
+            Set to true to enable TCP No Delay on the underlying TCP connection.
+            <br>
+            Default: true
+            </br></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="2a3ad02e-1f90-3bf7-6c73-d8c6cc968c43.htm">TopicDispatch</a></td><td><div class="summary">
+            Set to true to have the API dispatch messages based on topic. For more details see the 
+            <a href="9e4e366e-e346-9600-caf7-9cfaeebf841e.htm">IMessageDispatcher</a> documentation.
+            Default: false
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="8cfc5095-9235-d640-1a70-430739f864f0.htm">UserIdentification</a></td><td><div class="summary">
+            A read-only informational string that provides information about the application, 
+            such as the name of operating system user that is running the application, the hostname, and the PID of the application.
+            Returns empty string, if the session has not been connected.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="ada769c7-0f53-8b64-a23b-941743012739.htm">UserName</a></td><td><div class="summary">
+            The username required for authentication.  
+            Default: empty string
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="53b05ea7-ce0b-4c77-dde7-0807274c1c44.htm">VirtualRouterName</a></td><td><div class="summary">
+            A read-only session property that indicates the Virtual Router Name of the connected appliance. Used in building appliance endpoint 
+            and destination objects such as Queues. Appliance endpoints and destinations created with a virtual router name are valid for 
+            use with that appliance, or to address destinations on remote appliances (in a multiple-appliance network) when publishing messages.
+            <p>
+            Applications requiring the virtual router name need not poll this property every time it is needed, and may cache the 
+            name. Applications should query the name once after connecting the session, and again after a reconnect operation 
+            reports the <a href="20084581-3120-23a3-bc9a-2e57404e2c40.htm">VirtualRouterNameChanged</a> session event.
+            </p>
+            When not connected, an empty string is returned.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="51e37339-bc6a-35e3-c072-0252bc5144b3.htm">VPNName</a></td><td><div class="summary">
+            The name of the Message VPN to attempt to join when connecting to an appliance running SolOS-TR.   
+            Default: empty string 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="601bd914-ad98-4d7a-5a21-38af3d8d35e3.htm">VPNNameInUse</a></td><td><div class="summary">
+            A read-only session property that indicates which Message VPN the session is connected to. 
+            When not connected, or when not in client mode, an empty string is returned.
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID6RB')" onkeypress="SectionExpandCollapse_CheckKey('ID6RB', event)" tabindex="0"><img id="ID6RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID6RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="7f10bcf6-19f4-beff-0768-ced843e35168.htm">SolaceSystems.Solclient.Messaging Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter">Copyright 2004-2016 Solace Systems, Inc. All rights reserved.  <p /> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use and copy the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: <p /> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  <p /> UNLESS STATED ELSEWHERE BETWEEN YOU AND SOLACE SYSTEMS, INC., THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:support_request%40solacesystems.com?Subject=Solclient">support_request@solacesystems.com</a></div><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script> </div></body></html>

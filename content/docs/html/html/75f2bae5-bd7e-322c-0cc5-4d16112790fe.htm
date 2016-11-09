@@ -1,0 +1,226 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"> </script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>IMessage Interface</title><meta name="Language" content="en-us" /><meta name="System.Keywords" content="IMessage interface" /><meta name="System.Keywords" content="SolaceSystems.Solclient.Messaging.IMessage interface" /><meta name="System.Keywords" content="IMessage interface, about IMessage interface" /><meta name="Microsoft.Help.F1" content="SolaceSystems.Solclient.Messaging.IMessage" /><meta name="Microsoft.Help.Id" content="T:SolaceSystems.Solclient.Messaging.IMessage" /><meta name="Description" content="The super interface of any message sent or received over this messaging API. Client applications must dispose of messages (by calling Dispose()) as soon as they are done with them." /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="BrandingAware" content="true" /><meta name="container" content="SolaceSystems.Solclient.Messaging" /><meta name="file" content="75f2bae5-bd7e-322c-0cc5-4d16112790fe" /><meta name="guid" content="75f2bae5-bd7e-322c-0cc5-4d16112790fe" /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" /><script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"></script><script type="text/javascript" src="../scripts/branding-Website.js"></script></head><body onload="OnLoad('cs')"><input type="hidden" id="userDataCache" class="userDataStyle" /><div class="pageHeader" id="PageHeader">Solclient<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div><div class="pageBody"><div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="7f10bcf6-19f4-beff-0768-ced843e35168.htm" title="Solclient" tocid="roottoc">Solclient</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="7f10bcf6-19f4-beff-0768-ced843e35168.htm" title="SolaceSystems.Solclient.Messaging" tocid="7f10bcf6-19f4-beff-0768-ced843e35168">SolaceSystems.Solclient.Messaging</a></div><div class="toclevel1 current" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="75f2bae5-bd7e-322c-0cc5-4d16112790fe.htm" title="IMessage Interface" tocid="75f2bae5-bd7e-322c-0cc5-4d16112790fe">IMessage Interface</a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="2e6f81c1-77f2-60ee-d9e4-16a0eb7e3e91.htm" title="IMessage Methods" tocid="2e6f81c1-77f2-60ee-d9e4-16a0eb7e3e91">IMessage Methods</a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="a912e948-fd9e-d448-b76b-379dc6bfa9a5.htm" title="IMessage Properties" tocid="a912e948-fd9e-d448-b76b-379dc6bfa9a5">IMessage Properties</a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize" /><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize" /></div></div><div class="topicContent" id="TopicContent"><table class="titleTable"><tr><td class="titleColumn">IMessage Interface</td></tr></table><span class="introStyle">version: 7.2.1.27</span><div class="summary">
+            The super interface of any message sent or received over this messaging
+            API.
+            <p>
+            Client applications must dispose of messages (by calling Dispose()) as soon as they are done with them.
+            </p><p><strong>Note:</strong> Unless indicated otherwise, mutable IMessage's properties are accessed and 
+            assigned by <strong>value</strong> and not by <strong>reference</strong>. 
+            In other words, the property's getter returns a copy of the IMessage's mutable internal state 
+            and its setter takes a copy of the passed in mutable value.
+            </p></div><p> </p><strong>Namespace:</strong> <a href="7f10bcf6-19f4-beff-0768-ced843e35168.htm">SolaceSystems.Solclient.Messaging</a><br /><strong>Assembly:</strong> SolaceSystems.Solclient.Messaging (in SolaceSystems.Solclient.Messaging.dll) Version: 7.2.1.27 (7.2.1.27)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="ID1RBSection" class="collapsibleSection"><div class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="ID0ECCA_tab1" class="codeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID0ECCA','cs','1','3');return false;">C#</a></div><div id="ID0ECCA_tab2" class="codeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID0ECCA','vb','2','3');return false;">VB</a></div><div id="ID0ECCA_tab3" class="codeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID0ECCA','cpp','3','3');return false;">C++</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0ECCA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0ECCA');return false;" title="Copy">Copy</a></div></div><div id="ID0ECCA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="identifier">IMessage</span> : <span class="identifier">IDisposable</span></pre></div><div id="ID0ECCA_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Interface</span> <span class="identifier">IMessage</span>
+	<span class="keyword">Inherits</span> <span class="identifier">IDisposable</span></pre></div><div id="ID0ECCA_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">interface class</span> <span class="identifier">IMessage</span> : <span class="identifier">IDisposable</span></pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0ECCA");</script></div><p>The <span class="selflink">IMessage</span> type exposes the following members.</p><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="ID2RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="b7e5d77b-114e-ecb4-88e1-62143da69c28.htm">CreateUserPropertyMap</a></td><td><div class="summary">
+            Creates a user property map (of type <a href="fe47d7d1-f581-1059-d6e8-aaad2c1dc5cb.htm">IMapContainer</a>) in the meta header of a message.
+            Any existing user property map is overwritten.
+            After adding user properties to this map, it must be closed; if not, it 
+            is automatically closed after the associated message is disposed <a href="http://msdn2.microsoft.com/en-us/library/aax125c9" target="_self">IDisposable</a>.
+            <p>
+            Whether it is explicitly closed by the client application, or implicitly by the API, any attempt to use
+            this map results in an <a href="e5061a45-4a4c-5fad-4c38-abcb15f8ddc6.htm">OperationErrorException</a> with <a href="1dd5e649-a3ad-e357-604c-c56486a6db94.htm">ParamNullReference</a></p></div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/es4s3w1d" target="_self">Dispose</a></td><td><div class="summary">
+                    Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/aax125c9" target="_self">IDisposable</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="b4849cc3-9091-327e-52de-b2975f5bb239.htm">Dump<span id="LSTA35FAE1E_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTA35FAE1E_0?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a></td><td><div class="summary">
+            Returns a string representation of the contents of a message in human-readable form. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="4e7fc4a5-3ff7-1cbe-ddaa-238981ac13c5.htm">Dump(MessageDump)</a></td><td><div class="summary">
+            Returns a string representation of the contents of a message in human-readable form. 
+            Dump(MessageDump.Full) is equivalent to calling Dump().
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="aba7542c-7089-a983-b73d-b27d8009cf37.htm">GetBinaryAttachment</a></td><td><div class="summary">
+            Gets the binary attachment part of the message.
+            If not present, null is returned to the user.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="001a2db9-d96a-dc44-39b9-4110b41edf29.htm">GetDestinationTopicSuffix</a></td><td><div class="summary">
+            A getter for the suffix of the topic string. If the received message 
+            contains a topic destination and the topic begins with the session's topic 
+            prefix, this method returns the string following the '/' delimiter that 
+            terminates the topic prefix.
+            Returns null if not present.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="4467d35c-6428-f9da-607c-6af709a37373.htm">GetUserData</a></td><td><div class="summary">
+            Gets the user data part of the message.
+            Returns null if not present.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="af7fe580-22f6-a2bf-1e7d-0afa0bf6146d.htm">GetXmlContent</a></td><td><div class="summary">
+            Gets the XML content part of the message.
+            Returns null if not present.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="0e013349-7ce5-3e87-82da-5939b3a02af3.htm">Reset</a></td><td><div class="summary">
+            Release all memory associated with this message, returning
+            it to its original state, as if it has just been created.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="a3dd8d7a-138a-ba12-47a2-579e37f15bea.htm">SetAsReplyMessage</a></td><td><div class="summary">
+            Sets the reply attribute of the message.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="a4860f0d-7080-ed91-1f60-f68cdbd8b102.htm">SetBinaryAttachment</a></td><td><div class="summary">
+            Sets the binary attachment part of the message.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="9ae7f5b8-f0ed-4605-accd-08b0e73579ab.htm">SetReplyToSuffix</a></td><td><div class="summary">
+            Appends an application-specific suffix to the default topic destination for the session.
+            When the session is established, a unique topic destination is created for the session. This
+            topic is generated by the appliance, and the API subscribes to a wildcard extended topic that is
+            derived by appending './&gt;' to the unique topic destination. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="f67225ca-3c13-b73c-f873-8f3f1a1f3c5a.htm">SetUserData</a></td><td><div class="summary">
+            Sets the user data part of the message.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="ed16d3b3-0151-1907-3d26-c92c9788497f.htm">SetXmlContent</a></td><td><div class="summary">
+            Sets the XML content part of the message.
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID4RB')" onkeypress="SectionExpandCollapse_CheckKey('ID4RB', event)" tabindex="0"><img id="ID4RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Properties</span></div><div id="ID4RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="fa3ca233-6824-9516-a3c1-bea733d0f7ac.htm">AckImmediately</a></td><td><div class="summary">
+            When the ACKImmediately property is set to true on an outgoing Guaranteed Delivery message, 
+            it indicates that the appliance should ACK this message immediately upon receipt.
+            <p>
+            This property, when set by a publisher, may or may not be removed by the appliance prior to delivery
+            to a consumer, so message consumers must not rely on this property being present.
+            Setting this property on an outgoing direct message or on a received message has no effect.
+            </p>
+            Default: false
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="caa03c8f-8dee-bd5b-3a72-ae65fb35de72.htm">ADMessageId</a></td><td><div class="summary">
+            Applies to received messages only with DeliveryMode MessageDeliveryMode.PERSISTENT or
+            MessageDeliveryMode.NON_PERSISTENT.
+            Represents the message Id of a Guaranteed message and can 
+            be used when acknowledging such a message.
+            If not available 0 is returned.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="ac9871b6-905d-a8df-b27e-2e29c091c73f.htm">ApplicationMessageId</a></td><td><div class="summary">
+            Gets/sets the application messageId.
+            Returns <span class="code">null</span> if not present.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="e94fcfe0-9467-174e-9483-d11a60e67216.htm">ApplicationMessageType</a></td><td><div class="summary">
+            Gets/sets the application message type. This value is used by applications only
+            and is passed through the API untouched.
+            If not present, <span class="code">null</span> is returned.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="86511cff-c4d6-e2e4-528a-1e4fc450d354.htm">BinaryAttachment</a></td><td><div class="summary">
+            The binary attachment part of the message.
+            If not present, <span class="code">null</span> is returned to the user.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="df4d76b6-a1a8-b54f-d9ba-ee5fdba3358d.htm">CacheRequestId</a></td><td><div class="summary">
+            Returns the request ID set in the cache request.
+            Always null if CacheStatus is MessageCacheStatus.Live
+            If not present -1 is returned
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="1fd95a66-21b1-f87e-a5f4-02dac95b61bd.htm">CacheStatus</a></td><td><div class="summary">
+            Returns the MessageCacheStatus.        
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="9697fd72-7174-1640-ef7b-59f8500e2799.htm">ConsumerIdList</a></td><td><div class="summary">
+            Applies to received messages only.
+            Returns the Conusmer Id list, null if the received message has none.
+            
+            Consumer IDs are only used with XML content subscriptions, not with topic subscriptions.
+            When XML subscriptions are applied with consumer IDs, received messages contain a list of
+            the consumer IDs of all XML subscriptions that were a match to that received message.
+            This allows the application to know which of its XML subscriptions were a match to 
+            the received message.
+            
+            If not present, null is returned.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="5b5933db-a591-eadb-c8f2-6d5700cb436d.htm">CorrelationId</a></td><td><div class="summary">
+             The correlation id is used for correlating a request to a reply.
+             If not present, <span class="code">null</span> is returned.
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="f5a8b83a-ad29-cd60-e2ca-afc13b31f086.htm">CorrelationKey</a></td><td><div class="summary">
+            Applies to Guaranteed messages (where DeliveryMode is Persistent or Non-persistent). 
+            When set on a message, the correlation key is
+            returned in a message acknowledgment event.
+            If not present, null is returned. CorrelationKey is local to the current application, 
+            it is not transmitted on the wire.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="4c677822-1468-394d-1029-3ac72fc0dfbb.htm">DeliverToOne</a></td><td><div class="summary">
+            A setter/getter for the Deliver-To-One (DTO) property on a message
+            with a Delivery mode of <a href="083ca907-e90d-9522-5581-d5407d52ba26.htm">Direct</a>. When a message has the DTO property
+            set, it can to be delivered only to one client.
+            For a Guaranteed Delivery message (see <a href="211858f3-5897-eb07-9c96-6e8e21bd8461.htm">DeliveryMode</a>), this behavior only applies
+            to the "demoted" direct copy of this message.
+            <p>
+            This property is only supported by appliances running SolOS-TR.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="211858f3-5897-eb07-9c96-6e8e21bd8461.htm">DeliveryMode</a></td><td><div class="summary">
+            A setter/getter for <span class="code">MessageDeliveryMode</span>.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="0d6224f6-c3e7-4294-bca7-f28c8f413821.htm">Destination</a></td><td><div class="summary">
+            The Destination to send to or receive on.
+            For SolOS-Topic Routing (TR) it must be ITopic or IQueue (null is not a valid value when sending
+            the message).
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="3d3f522d-58c6-3627-88a6-188fc21671ae.htm">DiscardIndication</a></td><td><div class="summary">
+            Returns <span class="code">true</span> if one or more messages have been discarded prior 
+            to the current message, otherwise it returns <span class="code">false</span>. 
+            Indicates congestion discards only and is not affected by message eliding.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="19a61a2b-78b9-cdd3-b72d-f8ef7e02a82e.htm">DMQEligible</a></td><td><div class="summary">
+            Expired messages with this property set to true are moved to a Dead Message Queue when one is provisioned on the appliance.
+            Default: false
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="b6e1416a-b36d-1118-2677-0a700d09f66f.htm">ElidingEligible</a></td><td><div class="summary">
+            Setting this property to <span class="code">true</span> indicates that this message should be eligible for eliding.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="0c04c3c3-681f-520f-6a90-df2cdc35f8f8.htm">Expiration</a></td><td><div class="summary">
+            The UTC time (in milliseconds, from midnight, January 1, 1970 UTC) when the message is to expire. 
+            The expiration time is carried in the message when set to a non-zero value. 
+            Expiration time is not included when this value is set to zero.
+            <p>
+            Setting this property has no effect if the <a href="ab18887f-05eb-c044-2ca6-8489a28eb6fb.htm">TimeToLive</a> is set in the same message. 
+            The message expiration time is carried to clients that receive the message unmodified and does not affect the life cycle of the message.
+            Set <a href="ab18887f-05eb-c044-2ca6-8489a28eb6fb.htm">TimeToLive</a> to a positive value to enforce message expiry in the network.
+            When <a href="ab18887f-05eb-c044-2ca6-8489a28eb6fb.htm">TimeToLive</a> has a positive value, the Expiration is never carried in the message (defaulting to zero). However,
+            it may be calculated and retrieved if the session property <a href="80af69b1-a67b-d27b-60e8-307a0f055042.htm">CalculateMessageExpiration</a> is set to
+            true.
+            </p><p>
+            if message Expiration time is not set in the message and the session property
+            <a href="80af69b1-a67b-d27b-60e8-307a0f055042.htm">CalculateMessageExpiration</a> is set to true, the Expiration time
+            is calculated based on the message's TimeToLive. When enabled, the Expiration time
+            retrieved will be the UTC time when the message is sent plus the message's TimeToLive. The
+            Expiration time for received messages will be the UTC time when the message was received
+            plus the TimeToLive of the message at the time it was received.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="1565b49f-91e6-2cc6-1264-89a53e28dee4.htm">HttpContentEncoding</a></td><td><div class="summary">
+             The HTTP Content Encoding.
+             If not present, <span class="code">null</span> is returned.
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="5e3fb3cf-9bf0-04ea-896f-0bc7c9a30848.htm">HttpContentType</a></td><td><div class="summary">
+             The HTTP Content Type.
+             If not present, <span class="code">null</span> is returned.
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="41269ab5-dd05-cb9e-0a87-604dd090cd2c.htm">IsReplyMessage</a></td><td><div class="summary">
+             Returns <span class="code">true</span> if it is a reply message (reply to a request).
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="2e814753-e948-8563-b745-8b5fb8fe03c1.htm">ReceiverTimestamp</a></td><td><div class="summary">
+            Gets the receive timestamp (in milliseconds, from midnight, January 1, 1970 UTC).
+            Returns -1 if not present.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="cd002579-df29-1b07-a989-7082a9e2b8c1.htm">Redelivered</a></td><td><div class="summary">
+            Applies only when DeliveryMode is MessageDeliveryMode.PERSISTENT or 
+            MessageDeliveryMode.NON_PERSISTENT.
+            Indicates if the message has been delivered by the appliance to the API before.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="5fae7001-eabe-f01e-905d-58867f3a5351.htm">ReplyTo</a></td><td><div class="summary">
+            Represents the reply-to destination.
+            Returns <span class="code">null</span> if not present.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="c4b21b04-f511-140d-1597-7a00e0ee0e3c.htm">SenderId</a></td><td><div class="summary">
+            Represents the sender id. 
+            Returns null if not present.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="a79b0850-ce9d-4463-37f8-5e01ffc740c8.htm">SenderTimestamp</a></td><td><div class="summary">
+            Gets the sender timestamp (in milliseconds, from midnight, January 1, 1970 UTC).
+            Returns -1 if not present or set.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="747ada69-a44d-4a2d-c202-4800e2f09029.htm">SequenceNumber</a></td><td><div class="summary">
+            Represents the message sequence number.
+            The set operation overrides the sequence number automatically generated by the session (if set).
+            Returns <span class="code">null</span> if not present.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="ab18887f-05eb-c044-2ca6-8489a28eb6fb.htm">TimeToLive</a></td><td><div class="summary">
+            The number of milliseconds before the message is discarded or moved to a Dead Message Queue. 
+            A value of 0 means the message never expires. The default value is zero.
+            <p>
+            Note that this property is only valid for Guaranteed Delivery messages (Persistent and Non-Persistent). 
+            It has no effect when used in conjunction with other message types unless the message is promoted by the appliance to a Guaranteed Delivery message.
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="bb25ef6c-faa1-7a1b-8d17-25573b52087d.htm">TopicSequenceNumber</a></td><td><div class="summary">
+            Represents the Topic Sequence Number assigned by the appliance or the peer. Returns null if none is present
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="1859b2c3-e98d-e43d-3ba7-1feb591ccf3b.htm">UserCos</a></td><td><div class="summary">
+            A setter/getter for User Class of service.
+            <p>
+            The Class of Service has different semantics for direct and guaranteed messages.
+            For direct messaging, it determines the WRR weight for the message. For guaranteed messaging, it indicates
+            the discard eligibility of the message if the endpoint is congested (see <a href="1dd5e649-a3ad-e357-604c-c56486a6db94.htm">LowPriorityMsgCongestion</a>)
+            </p></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="2d7536de-c093-e30b-f1a7-880fc7e572b5.htm">UserData</a></td><td><div class="summary">
+            The user data part of the message (maximum: 36 bytes).
+            Returns <span class="code">null</span> if not present.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="48992ebf-d52e-f4c5-21d8-751662bdc311.htm">UserPropertyMap</a></td><td><div class="summary">
+            Returns the user property map from the message's meta header. If no user property map is present in the
+            message, this property is null. To create a new user property map use <a href="b7e5d77b-114e-ecb4-88e1-62143da69c28.htm">CreateUserPropertyMap<span id="LSTA35FAE1E_1"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTA35FAE1E_1?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a> 
+            instead.
+            <p>
+            After adding properties to this map, it must be closed; if not, it 
+            is automatically closed after the associated message is sent, or disposed <a href="http://msdn2.microsoft.com/en-us/library/aax125c9" target="_self">IDisposable</a>.
+            Whether it is explicitly closed by the client application, or implicitly by the API, any attempt to use
+            this map results in an <a href="e5061a45-4a4c-5fad-4c38-abcb15f8ddc6.htm">OperationErrorException</a> with <a href="1dd5e649-a3ad-e357-604c-c56486a6db94.htm">ParamNullReference</a>
+            error subcode.
+            </p><p>
+            As a consequence to the above note, when caching the reference to this map (to avoid creating a new temporary object with each access), 
+            client applications should not use this reference after the associated message has been sent or disposed. 
+            At that point the cached user property map reference is invalid, and a new user map reference is required by 
+            calling IMessage.UserPropertyMap to access the user property map again.
+            </p><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID3RB')" onkeypress="SectionExpandCollapse_CheckKey('ID3RB', event)" tabindex="0"><img id="ID3RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="ID3RBSection" class="collapsibleSection">
+            Do not set this value to the result of <a href="b7e5d77b-114e-ecb4-88e1-62143da69c28.htm">CreateUserPropertyMap<span id="LSTA35FAE1E_2"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTA35FAE1E_2?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>.  Doing so will cause the underlying structure to
+            be disposed.  Instead, access the map this way:
+            <div class="codeSnippetContainer"><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EAAAABCDA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0EAAAABCDA');return false;" title="Copy">Copy</a></div></div><div id="ID0EAAAABCDA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve">IMessage msg = ContextFactory.Instance.CreateMessage();
+msg.CreateUserPropertyMap();
+msg.UserPropertyMap.AddString(<span class="highlight-literal">"message"</span>, <span class="highlight-literal">"5"</span>);</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EAAAABCDA");</script></div></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="0dc964ac-bdfa-96c0-d74a-5622439ef467.htm">XmlContent</a></td><td><div class="summary">
+            The XML content part of the message.
+            Returns <span class="code">null</span> if not present.          
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID5RB')" onkeypress="SectionExpandCollapse_CheckKey('ID5RB', event)" tabindex="0"><img id="ID5RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID5RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="7f10bcf6-19f4-beff-0768-ced843e35168.htm">SolaceSystems.Solclient.Messaging Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter">Copyright 2004-2016 Solace Systems, Inc. All rights reserved.  <p /> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use and copy the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: <p /> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  <p /> UNLESS STATED ELSEWHERE BETWEEN YOU AND SOLACE SYSTEMS, INC., THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:support_request%40solacesystems.com?Subject=Solclient">support_request@solacesystems.com</a></div><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script> </div></body></html>
